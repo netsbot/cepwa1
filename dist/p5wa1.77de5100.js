@@ -31296,7 +31296,73 @@ var Lives = /** @class */function () {
   return Lives;
 }();
 exports.default = Lives;
-},{}],"src/lib/Controller.ts":[function(require,module,exports) {
+},{}],"src/lib/BombWord.ts":[function(require,module,exports) {
+"use strict";
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var WordDisplay_1 = __importDefault(require("./WordDisplay"));
+var BombWord = /** @class */function () {
+  function BombWord(p, word, onDestroyCallback) {
+    this.p = p;
+    this.word = word;
+    this.wordDisplay = new WordDisplay_1.default(p, word, [0, 0, 0], [255, 255, 255]);
+    this.onDestroyCallback = onDestroyCallback;
+  }
+  BombWord.prototype.loop = function () {
+    this.wordDisplay.display();
+  };
+  BombWord.prototype.onDestroy = function () {
+    this.onDestroyCallback();
+  };
+  BombWord.prototype.isOffScreen = function () {
+    return this.wordDisplay.isOffScreen();
+  };
+  return BombWord;
+}();
+exports.default = BombWord;
+},{"./WordDisplay":"src/lib/WordDisplay.ts"}],"src/lib/WordTypeGenerator.ts":[function(require,module,exports) {
+"use strict";
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var BombWord_1 = __importDefault(require("./BombWord"));
+var NormalWord_1 = __importDefault(require("./NormalWord"));
+var WordTypeGenerator = /** @class */function () {
+  function WordTypeGenerator() {}
+  WordTypeGenerator.generateWordType = function () {
+    var rand = Math.random();
+    var randomTrack = 0;
+    for (var i = 0; i < this.wordTypes.length; i++) {
+      randomTrack += this.wordTypes[i].probability;
+      if (rand <= randomTrack) {
+        return this.wordTypes[i].wordType;
+      }
+    }
+  };
+  WordTypeGenerator.wordTypes = [{
+    wordType: NormalWord_1.default,
+    probability: 0.51
+  }, {
+    wordType: BombWord_1.default,
+    probability: 0.49
+  }];
+  return WordTypeGenerator;
+}();
+exports.default = WordTypeGenerator;
+},{"./BombWord":"src/lib/BombWord.ts","./NormalWord":"src/lib/NormalWord.ts"}],"src/lib/Controller.ts":[function(require,module,exports) {
 "use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {
@@ -31313,6 +31379,8 @@ var WordCreator_1 = __importDefault(require("./WordCreator"));
 var Score_1 = __importDefault(require("./Score"));
 var english_5k_json_1 = __importDefault(require("../assets/english_5k.json"));
 var Lives_1 = __importDefault(require("./Lives"));
+var WordTypeGenerator_1 = __importDefault(require("./WordTypeGenerator"));
+var BombWord_1 = __importDefault(require("./BombWord"));
 var Controller = /** @class */function () {
   function Controller(p) {
     this.score = 0;
@@ -31343,7 +31411,15 @@ var Controller = /** @class */function () {
     if (this.p.random() < 0.03 && this.p.frameCount - this.prevAddTime > 60) {
       var word = this.english5kGenerator.getRandomWord();
       if (!this.onScreenWords.has(word)) {
-        this.onScreenWords.set(word, new NormalWord_1.default(this.p, word, this.incrementScore.bind(this)));
+        var wordType = WordTypeGenerator_1.default.generateWordType();
+        switch (wordType) {
+          case NormalWord_1.default:
+            this.onScreenWords.set(word, new NormalWord_1.default(this.p, word, this.incrementScore.bind(this)));
+            break;
+          case BombWord_1.default:
+            this.onScreenWords.set(word, new BombWord_1.default(this.p, word, this.decrementLives.bind(this)));
+            break;
+        }
         this.prevAddTime = this.p.frameCount;
       }
     }
@@ -31362,6 +31438,10 @@ var Controller = /** @class */function () {
     this.score += points * this.scoreMultiplier;
     this.scoreDisplay.setScore(this.score);
   };
+  Controller.prototype.decrementLives = function () {
+    this.lives -= 1;
+    this.livesDisplay.setLives(this.lives);
+  };
   Controller.prototype.loop = function () {
     this.addNewWord();
     this.updateWords();
@@ -31371,7 +31451,7 @@ var Controller = /** @class */function () {
   return Controller;
 }();
 exports.default = Controller;
-},{"./NormalWord":"src/lib/NormalWord.ts","./Input":"src/lib/Input.ts","./WordCreator":"src/lib/WordCreator.ts","./Score":"src/lib/Score.ts","../assets/english_5k.json":"src/assets/english_5k.json","./Lives":"src/lib/Lives.ts"}],"src/p5wa1.ts":[function(require,module,exports) {
+},{"./NormalWord":"src/lib/NormalWord.ts","./Input":"src/lib/Input.ts","./WordCreator":"src/lib/WordCreator.ts","./Score":"src/lib/Score.ts","../assets/english_5k.json":"src/assets/english_5k.json","./Lives":"src/lib/Lives.ts","./WordTypeGenerator":"src/lib/WordTypeGenerator.ts","./BombWord":"src/lib/BombWord.ts"}],"src/p5wa1.ts":[function(require,module,exports) {
 "use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {

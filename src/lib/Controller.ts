@@ -7,6 +7,8 @@ import ScoreDisplay from "./Score";
 
 import english_5k from "../assets/english_5k.json" assert {type: "json"}
 import LivesDisplay from "./Lives";
+import WordTypeGenerator from "./WordTypeGenerator";
+import BombWord from "./BombWord";
 
 class Controller {
     private p: p5;
@@ -57,7 +59,17 @@ class Controller {
         if (this.p.random() < 0.03 && this.p.frameCount - this.prevAddTime > 60) {
             const word = this.english5kGenerator.getRandomWord();
             if (!this.onScreenWords.has(word)) {
-                this.onScreenWords.set(word, new NormalWord(this.p, word, this.incrementScore.bind(this)));
+                let wordType = WordTypeGenerator.generateWordType();
+
+                switch (wordType) {
+                    case NormalWord:
+                        this.onScreenWords.set(word, new NormalWord(this.p, word, this.incrementScore.bind(this)));
+                        break;
+                    case BombWord:
+                        this.onScreenWords.set(word, new BombWord(this.p, word, this.decrementLives.bind(this)));
+                        break;
+                }
+
                 this.prevAddTime = this.p.frameCount;
             }
         }
@@ -76,6 +88,11 @@ class Controller {
     incrementScore(points: number) {
         this.score += points * this.scoreMultiplier;
         this.scoreDisplay.setScore(this.score);
+    }
+
+    decrementLives() {
+        this.lives -= 1;
+        this.livesDisplay.setLives(this.lives);
     }
 
 
