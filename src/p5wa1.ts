@@ -1,6 +1,6 @@
 import p5 from "p5";
-import Controller from "./lib/Controller";
-import WordDisplay from "./lib/WordDisplay";
+import Controller from "./controller";
+import WordDisplay from "./displays/word-display";
 
 const p5wa1 = (p: p5) => {
     let controller: Controller;
@@ -12,7 +12,7 @@ const p5wa1 = (p: p5) => {
     }
 
     p.setup = () => {
-        p.createCanvas(400, 400);
+        p.createCanvas(800, 400);
         p.textSize(18);
         p.textFont(font);
 

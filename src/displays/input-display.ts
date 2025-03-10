@@ -1,6 +1,6 @@
 import p5 from "p5";
 
-class Input {
+class InputDisplay {
     private p: p5;
     private input: p5.Element;
 
@@ -21,4 +21,4 @@ class Input {
     }
 }
 
-export default Input;
+export default InputDisplay;

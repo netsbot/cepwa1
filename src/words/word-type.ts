@@ -1,7 +1,7 @@
 type WordBlockInfo = {bg: number[], txt: number[]};
 
 
-class WordBlockType {
+class WordType {
     static Normal: WordBlockInfo = {
         bg: [220, 220, 220],
         txt: [0, 0, 0]
@@ -20,4 +20,4 @@ class WordBlockType {
     }
 }
 
-export { WordBlockType, WordBlockInfo };
+export { WordType, WordBlockInfo };

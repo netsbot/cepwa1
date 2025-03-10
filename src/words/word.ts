@@ -1,18 +1,16 @@
 import p5 from "p5";
+import WordDisplay from "../displays/word-display";
 
-import Word from "./Word";
-import WordDisplay from "./WordDisplay";
-
-class BombWord implements Word {
+abstract class Word {
     p: p5;
     word: string;
     wordDisplay: WordDisplay;
     onDestroyCallback: Function;
 
-    constructor(p: p5, word: string, onDestroyCallback: Function) {
+    constructor(p: p5, word: string, startingVel: p5.Vector, onDestroyCallback: Function, txt: [number, number, number] = [0, 0, 0], bg: [number, number, number] = [255, 255, 255]) {
         this.p = p;
         this.word = word;
-        this.wordDisplay = new WordDisplay(p, word, [0,0,0], [255, 255, 255]);
+        this.wordDisplay = new WordDisplay(p, word, startingVel, txt, bg);
         this.onDestroyCallback = onDestroyCallback;
     }
 
@@ -27,7 +25,6 @@ class BombWord implements Word {
     isOffScreen() {
         return this.wordDisplay.isOffScreen();
     }
-
 }
 
-export default BombWord;
+export default Word;
