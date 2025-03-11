@@ -111,8 +111,8 @@ class Controller {
                         this.p,
                         word,
                         this.p.createVector(0, this.wordVelocity),
-                        this.incrementScore.bind(this),
-                    ),
+                        this.incrementScore.bind(this)
+                    )
                 );
                 break;
             case MultiplierWord:
@@ -122,8 +122,8 @@ class Controller {
                         this.p,
                         word,
                         this.p.createVector(0, this.wordVelocity),
-                        this.tempChangeScoreMultiplier.bind(this),
-                    ),
+                        this.tempChangeScoreMultiplier.bind(this)
+                    )
                 );
                 break;
             case SlowWord:
@@ -133,8 +133,8 @@ class Controller {
                         this.p,
                         word,
                         this.p.createVector(0, this.wordVelocity),
-                        this.tempMultiplyWordVelocities.bind(this),
-                    ),
+                        this.tempMultiplyWordVelocities.bind(this)
+                    )
                 );
                 break;
             case PurgeWord:
@@ -144,8 +144,8 @@ class Controller {
                         this.p,
                         word,
                         this.p.createVector(0, this.wordVelocity),
-                        this.purgeAllWords.bind(this),
-                    ),
+                        this.purgeAllWords.bind(this)
+                    )
                 );
                 break;
         }
@@ -190,9 +190,9 @@ class Controller {
 
     private incrementScore(points: number) {
         this.score += points * this.scoreMultiplier;
-        this.score = Math.floor(this.score);
+        this.score = Math.round(this.score * 100) / 100;
         this.totalScore += points * this.scoreMultiplier;
-        this.totalScore = Math.floor(this.totalScore);
+        this.totalScore = Math.round(this.score * 100) / 100;
         this.mainInfoDisplay.setScore(this.totalScore);
         this.waterLevelDisplay.setPercentage(this.score / this.targetScore);
 
