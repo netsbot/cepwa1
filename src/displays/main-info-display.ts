@@ -1,5 +1,3 @@
-import p5 from "p5";
-
 class MainInfoDisplay {
     private score: number = 0;
     private highScore: number = 0;
@@ -25,7 +23,7 @@ class MainInfoDisplay {
     updateLine2() {
         let line2 = document.getElementById("line2");
         if (line2?.innerText != null)
-            line2.innerText = `Time left: ${this.timeLeft} Level: ${this.level} Target score: ${this.targetScore}`;
+            line2.innerText = `Time left: ${this.timeLeft} Level: ${this.level} Progress: ${this.score}/${this.targetScore}`;
     }
 
     setHighScore(highScore: number) {
