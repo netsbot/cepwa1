@@ -34425,16 +34425,16 @@ function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), 
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 var MainInfoDisplay = /*#__PURE__*/function () {
-  function MainInfoDisplay(p) {
+  function MainInfoDisplay() {
     _classCallCheck(this, MainInfoDisplay);
     this.score = 0;
+    this.highScore = 0;
     this.lives = 3;
     this.speed = 1;
     this.multiplier = 1;
     this.timeLeft = 60;
     this.level = 1;
     this.targetScore = 50;
-    this.p = p;
     this.updateLine1();
     this.updateLine2();
   }
@@ -34442,13 +34442,19 @@ var MainInfoDisplay = /*#__PURE__*/function () {
     key: "updateLine1",
     value: function updateLine1() {
       var line1 = document.getElementById("line1");
-      if ((line1 === null || line1 === void 0 ? void 0 : line1.innerText) != null) line1.innerText = "Score: ".concat(this.score, " Lives: ").concat("x".repeat(this.lives), " Speed: ").concat(this.speed, " Multiplier: ").concat(this.multiplier);
+      if ((line1 === null || line1 === void 0 ? void 0 : line1.innerText) != null) line1.innerText = "Score: ".concat(this.score, " High score: ").concat(this.highScore, " Lives: ").concat("x".repeat(this.lives), " Speed: ").concat(this.speed, " Multiplier: ").concat(this.multiplier);
     }
   }, {
     key: "updateLine2",
     value: function updateLine2() {
       var line2 = document.getElementById("line2");
       if ((line2 === null || line2 === void 0 ? void 0 : line2.innerText) != null) line2.innerText = "Time left: ".concat(this.timeLeft, " Level: ").concat(this.level, " Target score: ").concat(this.targetScore);
+    }
+  }, {
+    key: "setHighScore",
+    value: function setHighScore(highScore) {
+      this.highScore = highScore;
+      this.updateLine1();
     }
   }, {
     key: "setScore",
@@ -34794,7 +34800,7 @@ var WordCreator = /*#__PURE__*/function () {
     _classCallCheck(this, WordCreator);
     this.wordTypes = [{
       wordType: _normalWord.default,
-      probability: 0.5
+      probability: 0.75
     }, {
       wordType: _multiplierWord.default,
       probability: 0.1
@@ -34803,7 +34809,7 @@ var WordCreator = /*#__PURE__*/function () {
       probability: 0.1
     }, {
       wordType: _purgeWord.default,
-      probability: 0.3
+      probability: 0.05
     }];
     this.data = data.words;
   }
@@ -34892,21 +34898,24 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 var Controller = /*#__PURE__*/function () {
   function Controller(p) {
     _classCallCheck(this, Controller);
-    this.p = p;
-    this.onScreenWords = new Map();
-    4;
-    this.english5kGenerator = new _wordCreator.default(_english_5k.default);
-    this.input = new _inputDisplay.default(p);
-    this.mainInfoDisplay = new _mainInfoDisplay.default(p);
-    this.waterLevelDisplay = new _waterLevelDisplay.default(p);
+    this.prevAddTime = 0;
     this.scoreMultiplier = 1;
     this.wordVelocity = 1;
+    this.totalScore = 0;
     this.score = 0;
+    this.highScore = localStorage.getItem("highScore") ? parseInt(localStorage.getItem("highScore")) : 0;
     this.lives = 3;
     this.targetScore = 50;
     this.timeLeft = 60;
     this.level = 1;
-    this.prevAddTime = 0;
+    this.beatenHighScore = false;
+    this.p = p;
+    this.onScreenWords = new Map();
+    this.english5kGenerator = new _wordCreator.default(_english_5k.default);
+    this.input = new _inputDisplay.default(p);
+    this.mainInfoDisplay = new _mainInfoDisplay.default();
+    this.waterLevelDisplay = new _waterLevelDisplay.default(p);
+    this.mainInfoDisplay.setHighScore(this.highScore);
     this.p.keyPressed = this.handleKeyPress.bind(this);
     this.timeCheckIntervalId = this.setTimeCheck();
     this.multiplerTimeoutIds = [];
@@ -34915,23 +34924,33 @@ var Controller = /*#__PURE__*/function () {
   return _createClass(Controller, [{
     key: "handleKeyPress",
     value: function handleKeyPress() {
-      var _this = this;
       if (this.p.keyCode !== 13) return;
-      console.log(this.input.getValue());
       var value = this.input.getValue();
       if (this.onScreenWords.has(value)) {
-        var word = this.onScreenWords.get(value);
-        word === null || word === void 0 ? void 0 : word.onDestroyStart();
-        this.input.clear();
-        Controller.clickSound.play();
+        this.handleCorrectWord(value);
       } else {
-        this.decrementLives();
-        Controller.wrongSound.play();
-        this.setVignette(true);
-        setTimeout(function () {
-          _this.setVignette(false);
-        }, 500);
+        this.handleIncorrectWord();
       }
+    }
+  }, {
+    key: "handleCorrectWord",
+    value: function handleCorrectWord(value) {
+      var word = this.onScreenWords.get(value);
+      word === null || word === void 0 ? void 0 : word.onDestroyStart();
+      this.input.clear();
+      Controller.clickSound.play();
+    }
+  }, {
+    key: "handleIncorrectWord",
+    value: function handleIncorrectWord() {
+      var _this = this;
+      this.decrementLives();
+      Controller.wrongSound.play();
+      this.setVignette(true);
+      this.input.clear();
+      setTimeout(function () {
+        _this.setVignette(false);
+      }, 500);
     }
   }, {
     key: "addNewWord",
@@ -34939,23 +34958,28 @@ var Controller = /*#__PURE__*/function () {
       if (this.p.random() < 0.2 * this.level && this.p.frameCount - this.prevAddTime > 60) {
         var word = this.english5kGenerator.getRandomWord();
         if (!this.onScreenWords.has(word)) {
-          var wordType = this.english5kGenerator.getRandomWordType();
-          switch (wordType) {
-            case _normalWord.default:
-              this.onScreenWords.set(word, new _normalWord.default(this.p, word, this.p.createVector(0, this.wordVelocity), this.incrementScore.bind(this)));
-              break;
-            case _multiplierWord.default:
-              this.onScreenWords.set(word, new _multiplierWord.default(this.p, word, this.p.createVector(0, this.wordVelocity), this.tempChangeScoreMultiplier.bind(this)));
-              break;
-            case _slowWord.default:
-              this.onScreenWords.set(word, new _slowWord.default(this.p, word, this.p.createVector(0, this.wordVelocity), this.tempMultiplyWordVelocities.bind(this)));
-              break;
-            case _purgeWord.default:
-              this.onScreenWords.set(word, new _purgeWord.default(this.p, word, this.p.createVector(0, this.wordVelocity), this.purgeAllWords.bind(this)));
-              break;
-          }
+          this.createWord(word);
           this.prevAddTime = this.p.frameCount;
         }
+      }
+    }
+  }, {
+    key: "createWord",
+    value: function createWord(word) {
+      var wordType = this.english5kGenerator.getRandomWordType();
+      switch (wordType) {
+        case _normalWord.default:
+          this.onScreenWords.set(word, new _normalWord.default(this.p, word, this.p.createVector(0, this.wordVelocity), this.incrementScore.bind(this)));
+          break;
+        case _multiplierWord.default:
+          this.onScreenWords.set(word, new _multiplierWord.default(this.p, word, this.p.createVector(0, this.wordVelocity), this.tempChangeScoreMultiplier.bind(this)));
+          break;
+        case _slowWord.default:
+          this.onScreenWords.set(word, new _slowWord.default(this.p, word, this.p.createVector(0, this.wordVelocity), this.tempMultiplyWordVelocities.bind(this)));
+          break;
+        case _purgeWord.default:
+          this.onScreenWords.set(word, new _purgeWord.default(this.p, word, this.p.createVector(0, this.wordVelocity), this.purgeAllWords.bind(this)));
+          break;
       }
     }
   }, {
@@ -34966,7 +34990,11 @@ var Controller = /*#__PURE__*/function () {
       try {
         for (_iterator.s(); !(_step = _iterator.n()).done;) {
           var word = _step.value;
-          if (word.isOffScreen()) this.onScreenWords.delete(word.getWord());else word.loop();
+          if (word.isOffScreen()) {
+            this.onScreenWords.delete(word.getWord());
+          } else {
+            word.loop();
+          }
           if (word.shouldDestroyWord()) {
             word.onDestroyEnd();
             this.onScreenWords.delete(word.getWord());
@@ -34984,6 +35012,17 @@ var Controller = /*#__PURE__*/function () {
       var _this2 = this;
       this.wordVelocity *= multiplier;
       this.wordVelocity = Math.round(this.wordVelocity * 100) / 100;
+      this.updateWordVelocities();
+      var timeout = setTimeout(function () {
+        _this2.wordVelocity /= multiplier;
+        _this2.wordVelocity = Math.round(_this2.wordVelocity * 100) / 100;
+        _this2.updateWordVelocities();
+      }, 10000);
+      this.velocityTimeoutIds.push(timeout);
+    }
+  }, {
+    key: "updateWordVelocities",
+    value: function updateWordVelocities() {
       var _iterator2 = _createForOfIteratorHelper(this.onScreenWords.values()),
         _step2;
       try {
@@ -34997,32 +35036,21 @@ var Controller = /*#__PURE__*/function () {
         _iterator2.f();
       }
       this.mainInfoDisplay.setSpeed(this.wordVelocity);
-      var timeout = setTimeout(function () {
-        _this2.wordVelocity /= multiplier;
-        _this2.wordVelocity = Math.round(_this2.wordVelocity * 100) / 100;
-        var _iterator3 = _createForOfIteratorHelper(_this2.onScreenWords.values()),
-          _step3;
-        try {
-          for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-            var word = _step3.value;
-            word.setVelocity(_this2.p.createVector(0, _this2.wordVelocity));
-          }
-        } catch (err) {
-          _iterator3.e(err);
-        } finally {
-          _iterator3.f();
-        }
-        _this2.mainInfoDisplay.setSpeed(_this2.wordVelocity);
-      }, 10000);
-      this.velocityTimeoutIds.push(timeout);
     }
   }, {
     key: "incrementScore",
     value: function incrementScore(points) {
       this.score += points * this.scoreMultiplier;
       this.score = Math.floor(this.score);
-      this.mainInfoDisplay.setScore(this.score);
+      this.totalScore += points * this.scoreMultiplier;
+      this.totalScore = Math.floor(this.totalScore);
+      this.mainInfoDisplay.setScore(this.totalScore);
       this.waterLevelDisplay.setPercentage(this.score / this.targetScore);
+      if (this.totalScore > this.highScore) {
+        this.beatenHighScore = true;
+        this.highScore = this.totalScore;
+        this.mainInfoDisplay.setHighScore(this.highScore);
+      }
     }
   }, {
     key: "decrementLives",
@@ -35041,19 +35069,45 @@ var Controller = /*#__PURE__*/function () {
         _this3.scoreMultiplier /= multiplier;
         _this3.scoreMultiplier = Math.round(_this3.scoreMultiplier * 100) / 100;
         _this3.mainInfoDisplay.setMultiplier(_this3.scoreMultiplier);
-        console.log("Score multiplier reset");
       }, 10000);
       this.multiplerTimeoutIds.push(timeout);
     }
   }, {
     key: "purgeAllWords",
     value: function purgeAllWords() {
-      var _iterator4 = _createForOfIteratorHelper(this.onScreenWords.values()),
+      var _iterator3 = _createForOfIteratorHelper(this.onScreenWords.values()),
+        _step3;
+      try {
+        for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+          var word = _step3.value;
+          word.onDestroyStart();
+        }
+      } catch (err) {
+        _iterator3.e(err);
+      } finally {
+        _iterator3.f();
+      }
+    }
+  }, {
+    key: "endGame",
+    value: function endGame() {
+      this.p.noLoop();
+      clearInterval(this.timeCheckIntervalId);
+      this.clearTimeouts(this.multiplerTimeoutIds);
+      this.clearTimeouts(this.velocityTimeoutIds);
+      this.displayEndGameMessage();
+      this.hideCanvas();
+      localStorage.setItem("highScore", this.highScore.toString());
+    }
+  }, {
+    key: "clearTimeouts",
+    value: function clearTimeouts(timeoutIds) {
+      var _iterator4 = _createForOfIteratorHelper(timeoutIds),
         _step4;
       try {
         for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
-          var word = _step4.value;
-          word.onDestroyStart();
+          var timeoutId = _step4.value;
+          clearTimeout(timeoutId);
         }
       } catch (err) {
         _iterator4.e(err);
@@ -35062,40 +35116,30 @@ var Controller = /*#__PURE__*/function () {
       }
     }
   }, {
-    key: "endGame",
-    value: function endGame() {
-      this.p.noLoop();
-      clearInterval(this.timeCheckIntervalId);
-      var _iterator5 = _createForOfIteratorHelper(this.multiplerTimeoutIds),
-        _step5;
-      try {
-        for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
-          var timeoutId = _step5.value;
-          clearTimeout(timeoutId);
+    key: "displayEndGameMessage",
+    value: function displayEndGameMessage() {
+      var endGame = document.getElementById("end-game");
+      if ((endGame === null || endGame === void 0 ? void 0 : endGame.innerHTML) != null) {
+        if (this.beatenHighScore) {
+          endGame.innerHTML = "You beat the high score! Your score was ".concat(this.totalScore, "!");
+        } else {
+          endGame.innerHTML = "Game over! Your score was ".concat(this.totalScore, "!");
         }
-      } catch (err) {
-        _iterator5.e(err);
-      } finally {
-        _iterator5.f();
       }
-      var _iterator6 = _createForOfIteratorHelper(this.velocityTimeoutIds),
-        _step6;
-      try {
-        for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
-          var _timeoutId = _step6.value;
-          clearTimeout(_timeoutId);
-        }
-      } catch (err) {
-        _iterator6.e(err);
-      } finally {
-        _iterator6.f();
-      }
+      endGame === null || endGame === void 0 ? void 0 : endGame.style.setProperty("display", "block");
+    }
+  }, {
+    key: "hideCanvas",
+    value: function hideCanvas() {
+      var canvas = document.getElementById("defaultCanvas0");
+      canvas === null || canvas === void 0 ? void 0 : canvas.style.setProperty("display", "none");
     }
   }, {
     key: "setTimeCheck",
     value: function setTimeCheck() {
       var _this4 = this;
       return setInterval(function () {
+        if (_this4.timeLeft <= 0) return;
         _this4.timeLeft -= 1;
         _this4.mainInfoDisplay.setTimeLeft(_this4.timeLeft);
       }, 1000);
@@ -35103,16 +35147,21 @@ var Controller = /*#__PURE__*/function () {
   }, {
     key: "newLevel",
     value: function newLevel() {
-      // im too lazy so i just hard coded the values
       this.level += 1;
-      this.targetScore = 50 * Math.pow(1.5, this.level);
-      this.targetScore = Math.floor(this.targetScore);
-      this.timeLeft = 60 * Math.pow(1.2, this.level);
-      this.timeLeft = Math.floor(this.timeLeft);
+      this.targetScore = Math.floor(50 * Math.pow(1.5, this.level));
+      this.timeLeft = Math.floor(60 * Math.pow(1.2, this.level));
       this.scoreMultiplier = 1;
-      this.wordVelocity = Math.pow(1.2, this.level);
+      this.wordVelocity = Math.round(Math.pow(1.2, this.level) * 100) / 100;
       this.score = 0;
       this.lives = 3;
+      this.updateDisplaysForNewLevel();
+      this.updateWordVelocities();
+      this.clearTimeouts(this.multiplerTimeoutIds);
+      this.clearTimeouts(this.velocityTimeoutIds);
+    }
+  }, {
+    key: "updateDisplaysForNewLevel",
+    value: function updateDisplaysForNewLevel() {
       this.mainInfoDisplay.setScore(this.score);
       this.mainInfoDisplay.setLives(this.lives);
       this.mainInfoDisplay.setSpeed(this.wordVelocity);
@@ -35121,42 +35170,6 @@ var Controller = /*#__PURE__*/function () {
       this.mainInfoDisplay.setLevel(this.level);
       this.mainInfoDisplay.setTargetScore(this.targetScore);
       this.waterLevelDisplay.setPercentage(0);
-      var _iterator7 = _createForOfIteratorHelper(this.onScreenWords.values()),
-        _step7;
-      try {
-        for (_iterator7.s(); !(_step7 = _iterator7.n()).done;) {
-          var word = _step7.value;
-          word.setVelocity(this.p.createVector(0, this.wordVelocity));
-        }
-      } catch (err) {
-        _iterator7.e(err);
-      } finally {
-        _iterator7.f();
-      }
-      var _iterator8 = _createForOfIteratorHelper(this.multiplerTimeoutIds),
-        _step8;
-      try {
-        for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
-          var timeoutId = _step8.value;
-          clearTimeout(timeoutId);
-        }
-      } catch (err) {
-        _iterator8.e(err);
-      } finally {
-        _iterator8.f();
-      }
-      var _iterator9 = _createForOfIteratorHelper(this.velocityTimeoutIds),
-        _step9;
-      try {
-        for (_iterator9.s(); !(_step9 = _iterator9.n()).done;) {
-          var _timeoutId2 = _step9.value;
-          clearTimeout(_timeoutId2);
-        }
-      } catch (err) {
-        _iterator9.e(err);
-      } finally {
-        _iterator9.f();
-      }
     }
   }, {
     key: "setVignette",
@@ -35244,7 +35257,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56127" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61821" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -9,7 +9,7 @@ class WordCreator {
     private wordTypes = [
         {
             wordType: NormalWord,
-            probability: 0.5
+            probability: 0.75
         },
         {
             wordType: MultiplierWord,
@@ -21,7 +21,7 @@ class WordCreator {
         },
         {
             wordType: PurgeWord,
-            probability: 0.3
+            probability: 0.05
         }
     ]
 

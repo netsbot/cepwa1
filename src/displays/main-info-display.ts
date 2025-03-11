@@ -1,8 +1,8 @@
 import p5 from "p5";
 
 class MainInfoDisplay {
-    private p: p5;
     private score: number = 0;
+    private highScore: number = 0;
     private lives: number = 3;
     private speed: number = 1;
     private multiplier: number = 1;
@@ -10,8 +10,7 @@ class MainInfoDisplay {
     private level: number = 1;
     private targetScore: number = 50;
 
-    constructor(p: p5) {
-        this.p = p;
+    constructor() {
         this.updateLine1();
         this.updateLine2();
     }
@@ -20,13 +19,18 @@ class MainInfoDisplay {
         let line1 = document.getElementById("line1");
 
         if (line1?.innerText != null)
-            line1.innerText = `Score: ${this.score} Lives: ${"x".repeat(this.lives)} Speed: ${this.speed} Multiplier: ${this.multiplier}`;
+            line1.innerText = `Score: ${this.score} High score: ${this.highScore} Lives: ${"x".repeat(this.lives)} Speed: ${this.speed} Multiplier: ${this.multiplier}`;
     }
 
     updateLine2() {
         let line2 = document.getElementById("line2");
         if (line2?.innerText != null)
             line2.innerText = `Time left: ${this.timeLeft} Level: ${this.level} Target score: ${this.targetScore}`;
+    }
+
+    setHighScore(highScore: number) {
+        this.highScore = highScore;
+        this.updateLine1();
     }
 
     setScore(score: number) {

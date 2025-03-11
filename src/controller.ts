@@ -18,16 +18,18 @@ class Controller {
     private onScreenWords: Map<string, Word>;
     private english5kGenerator: WordGenerator;
     private input: InputDisplay;
-    private prevAddTime: number;
+    private prevAddTime: number = 0;
 
-    private scoreMultiplier: number;
-    private wordVelocity: number;
-    private score: number;
-    private lives: number;
+    private scoreMultiplier: number = 1;
+    private wordVelocity: number = 1;
+    private totalScore: number = 0;
+    private score: number = 0;
+    private highScore: number = localStorage.getItem("highScore") ? parseInt(localStorage.getItem("highScore")!) : 0;
+    private lives: number = 3;
 
-    private targetScore: number;
-    private timeLeft: number;
-    private level: number;
+    private targetScore: number = 50;
+    private timeLeft: number = 60;
+    private level: number = 1;
 
     private mainInfoDisplay: MainInfoDisplay;
     private waterLevelDisplay: WaterLevelDisplay;
@@ -39,26 +41,19 @@ class Controller {
     static wrongSound: Howl;
     static clickSound: Howl;
 
+    private beatenHighScore: boolean = false;
+
     constructor(p: p5) {
         this.p = p;
 
-        this.onScreenWords = new Map<string, Word>(); 4
+        this.onScreenWords = new Map<string, Word>();
         this.english5kGenerator = new WordGenerator(english_5k);
 
         this.input = new InputDisplay(p);
-        this.mainInfoDisplay = new MainInfoDisplay(p);
+        this.mainInfoDisplay = new MainInfoDisplay();
         this.waterLevelDisplay = new WaterLevelDisplay(p);
 
-        this.scoreMultiplier = 1;
-        this.wordVelocity = 1;
-        this.score = 0;
-        this.lives = 3;
-
-        this.targetScore = 50;
-        this.timeLeft = 60;
-        this.level = 1;
-
-        this.prevAddTime = 0;
+        this.mainInfoDisplay.setHighScore(this.highScore);
 
         this.p.keyPressed = this.handleKeyPress.bind(this);
 
@@ -70,102 +65,118 @@ class Controller {
     private handleKeyPress() {
         if (this.p.keyCode !== 13) return;
 
-        console.log(this.input.getValue());
-
         const value = this.input.getValue();
         if (this.onScreenWords.has(value)) {
-            let word = this.onScreenWords.get(value);
-            word?.onDestroyStart();
-            this.input.clear();
-            Controller.clickSound.play();
+            this.handleCorrectWord(value);
         } else {
-            this.decrementLives();
-            Controller.wrongSound.play();
-            this.setVignette(true);
-            setTimeout(() => {
-                this.setVignette(false);
-            }, 500);
+            this.handleIncorrectWord();
         }
+    }
+
+    private handleCorrectWord(value: string) {
+        let word = this.onScreenWords.get(value);
+        word?.onDestroyStart();
+        this.input.clear();
+        Controller.clickSound.play();
+    }
+
+    private handleIncorrectWord() {
+        this.decrementLives();
+        Controller.wrongSound.play();
+        this.setVignette(true);
+        this.input.clear();
+        setTimeout(() => {
+            this.setVignette(false);
+        }, 500);
     }
 
     private addNewWord() {
         if (this.p.random() < 0.2 * this.level && this.p.frameCount - this.prevAddTime > 60) {
             const word = this.english5kGenerator.getRandomWord();
             if (!this.onScreenWords.has(word)) {
-                let wordType = this.english5kGenerator.getRandomWordType();
-
-                switch (wordType) {
-                    case NormalWord:
-                        this.onScreenWords.set(word, new NormalWord(this.p, word, this.p.createVector(0, this.wordVelocity), this.incrementScore.bind(this)));
-                        break;
-                    case MultiplierWord:
-                        this.onScreenWords.set(word, new MultiplierWord(this.p, word, this.p.createVector(0, this.wordVelocity), this.tempChangeScoreMultiplier.bind(this)));
-                        break;
-                    case SlowWord:
-                        this.onScreenWords.set(word, new SlowWord(this.p, word, this.p.createVector(0, this.wordVelocity), this.tempMultiplyWordVelocities.bind(this)));
-                        break;
-                    case PurgeWord:
-                        this.onScreenWords.set(word, new PurgeWord(this.p, word, this.p.createVector(0, this.wordVelocity), this.purgeAllWords.bind(this)));
-                        break;
-                }
-
+                this.createWord(word);
                 this.prevAddTime = this.p.frameCount;
             }
         }
     }
 
+    private createWord(word: string) {
+        let wordType = this.english5kGenerator.getRandomWordType();
+
+        switch (wordType) {
+            case NormalWord:
+                this.onScreenWords.set(word, new NormalWord(this.p, word, this.p.createVector(0, this.wordVelocity), this.incrementScore.bind(this)));
+                break;
+            case MultiplierWord:
+                this.onScreenWords.set(word, new MultiplierWord(this.p, word, this.p.createVector(0, this.wordVelocity), this.tempChangeScoreMultiplier.bind(this)));
+                break;
+            case SlowWord:
+                this.onScreenWords.set(word, new SlowWord(this.p, word, this.p.createVector(0, this.wordVelocity), this.tempMultiplyWordVelocities.bind(this)));
+                break;
+            case PurgeWord:
+                this.onScreenWords.set(word, new PurgeWord(this.p, word, this.p.createVector(0, this.wordVelocity), this.purgeAllWords.bind(this)));
+                break;
+        }
+    }
+
     private updateWords() {
         for (let word of this.onScreenWords.values()) {
-            if (word.isOffScreen())
+            if (word.isOffScreen()) {
                 this.onScreenWords.delete(word.getWord());
-            else
+            } else {
                 word.loop();
+            }
 
             if (word.shouldDestroyWord()) {
                 word.onDestroyEnd();
                 this.onScreenWords.delete(word.getWord());
             }
-
         }
     }
 
-    tempMultiplyWordVelocities(multiplier: number) {
+    private tempMultiplyWordVelocities(multiplier: number) {
         this.wordVelocity *= multiplier;
         this.wordVelocity = Math.round(this.wordVelocity * 100) / 100;
 
-        for (let word of this.onScreenWords.values()) {
-            word.setVelocity(this.p.createVector(0, this.wordVelocity));
-        }
-
-        this.mainInfoDisplay.setSpeed(this.wordVelocity);
+        this.updateWordVelocities();
 
         let timeout = setTimeout(() => {
             this.wordVelocity /= multiplier;
             this.wordVelocity = Math.round(this.wordVelocity * 100) / 100;
-
-            for (let word of this.onScreenWords.values()) {
-                word.setVelocity(this.p.createVector(0, this.wordVelocity));
-            }
-
-            this.mainInfoDisplay.setSpeed(this.wordVelocity);
+            this.updateWordVelocities();
         }, 10000);
 
         this.velocityTimeoutIds.push(timeout);
     }
 
-    incrementScore(points: number) {
-        this.score += points * this.scoreMultiplier;
-        this.score = Math.floor(this.score);
-        this.mainInfoDisplay.setScore(this.score);
-        this.waterLevelDisplay.setPercentage(this.score / this.targetScore);
+    private updateWordVelocities() {
+        for (let word of this.onScreenWords.values()) {
+            word.setVelocity(this.p.createVector(0, this.wordVelocity));
+        }
+        this.mainInfoDisplay.setSpeed(this.wordVelocity);
     }
 
-    decrementLives() {
+    private incrementScore(points: number) {
+        this.score += points * this.scoreMultiplier;
+        this.score = Math.floor(this.score);
+        this.totalScore += points * this.scoreMultiplier;
+        this.totalScore = Math.floor(this.totalScore);
+        this.mainInfoDisplay.setScore(this.totalScore);
+        this.waterLevelDisplay.setPercentage(this.score / this.targetScore);
+
+        if (this.totalScore > this.highScore) {
+            this.beatenHighScore = true;
+            this.highScore = this.totalScore;
+            this.mainInfoDisplay.setHighScore(this.highScore);
+        }
+    }
+
+    private decrementLives() {
         this.lives -= 1;
         this.mainInfoDisplay.setLives(this.lives);
     }
 
-    tempChangeScoreMultiplier(multiplier: number) {
+    private tempChangeScoreMultiplier(multiplier: number) {
         this.scoreMultiplier *= multiplier;
         this.scoreMultiplier = Math.round(this.scoreMultiplier * 100) / 100;
 
@@ -174,16 +185,13 @@ class Controller {
         let timeout = setTimeout(() => {
             this.scoreMultiplier /= multiplier;
             this.scoreMultiplier = Math.round(this.scoreMultiplier * 100) / 100;
-
             this.mainInfoDisplay.setMultiplier(this.scoreMultiplier);
-
-            console.log("Score multiplier reset");
         }, 10000);
 
         this.multiplerTimeoutIds.push(timeout);
     }
 
-    purgeAllWords() {
+    private purgeAllWords() {
         for (let word of this.onScreenWords.values()) {
             word.onDestroyStart();
         }
@@ -192,38 +200,64 @@ class Controller {
     private endGame() {
         this.p.noLoop();
         clearInterval(this.timeCheckIntervalId);
-        for (let timeoutId of this.multiplerTimeoutIds) {
-            clearTimeout(timeoutId);
-        }
+        this.clearTimeouts(this.multiplerTimeoutIds);
+        this.clearTimeouts(this.velocityTimeoutIds);
 
-        for (let timeoutId of this.velocityTimeoutIds) {
+        this.displayEndGameMessage();
+        this.hideCanvas();
+
+        localStorage.setItem("highScore", this.highScore.toString());
+    }
+
+    private clearTimeouts(timeoutIds: NodeJS.Timeout[]) {
+        for (let timeoutId of timeoutIds) {
             clearTimeout(timeoutId);
         }
     }
 
+    private displayEndGameMessage() {
+        let endGame = document.getElementById("end-game");
+        if (endGame?.innerHTML != null) {
+            if (this.beatenHighScore) {
+                endGame.innerHTML = `You beat the high score! Your score was ${this.totalScore}!`;
+            } else {
+                endGame.innerHTML = `Game over! Your score was ${this.totalScore}!`;
+            }
+        }
+        endGame?.style.setProperty("display", "block");
+    }
+
+    private hideCanvas() {
+        let canvas = document.getElementById("defaultCanvas0");
+        canvas?.style.setProperty("display", "none");
+    }
+
     private setTimeCheck() {
         return setInterval(() => {
+            if (this.timeLeft <= 0) return;
             this.timeLeft -= 1;
             this.mainInfoDisplay.setTimeLeft(this.timeLeft);
         }, 1000);
     }
 
-
     private newLevel() {
-        // im too lazy so i just hard coded the values
-
         this.level += 1;
 
-        this.targetScore = 50 * 1.5 ** this.level;
-        this.targetScore = Math.floor(this.targetScore);
-        this.timeLeft = 60 * 1.2 ** this.level;
-        this.timeLeft = Math.floor(this.timeLeft);
+        this.targetScore = Math.floor(50 * 1.5 ** this.level);
+        this.timeLeft = Math.floor(60 * 1.2 ** this.level);
 
         this.scoreMultiplier = 1;
-        this.wordVelocity = 1.2 ** this.level;
+        this.wordVelocity = Math.round(1.2 ** this.level * 100) / 100;
         this.score = 0;
         this.lives = 3;
 
+        this.updateDisplaysForNewLevel();
+        this.updateWordVelocities();
+        this.clearTimeouts(this.multiplerTimeoutIds);
+        this.clearTimeouts(this.velocityTimeoutIds);
+    }
+
+    private updateDisplaysForNewLevel() {
         this.mainInfoDisplay.setScore(this.score);
         this.mainInfoDisplay.setLives(this.lives);
         this.mainInfoDisplay.setSpeed(this.wordVelocity);
@@ -232,18 +266,6 @@ class Controller {
         this.mainInfoDisplay.setLevel(this.level);
         this.mainInfoDisplay.setTargetScore(this.targetScore);
         this.waterLevelDisplay.setPercentage(0);
-
-        for (let word of this.onScreenWords.values()) {
-            word.setVelocity(this.p.createVector(0, this.wordVelocity));
-        }
-
-        for (let timeoutId of this.multiplerTimeoutIds) {
-            clearTimeout(timeoutId);
-        }
-
-        for (let timeoutId of this.velocityTimeoutIds) {
-            clearTimeout(timeoutId);
-        }
     }
 
     private setVignette(display: boolean) {
