@@ -3,7 +3,7 @@ import p5 from "p5";
 import InputDisplay from "./displays/input-display";
 import MainInfoDisplay from "./displays/main-info-display";
 
-import english_5k from "../dist/assets/english_5k.json" assert { type: "json" };
+import english_5k from "./assets/english_5k.json" assert { type: "json" };
 import Word from "./words/word";
 import WordGenerator from "./words/word-creator";
 
