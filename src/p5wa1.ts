@@ -1,6 +1,6 @@
 import p5 from "p5";
 import Controller from "./controller";
-import WordDisplay from "./displays/word-display";
+import Word from "./words/word";
 
 const p5wa1 = (p: p5) => {
     let controller: Controller;
@@ -8,7 +8,7 @@ const p5wa1 = (p: p5) => {
 
     p.preload = () => {
         font = p.loadFont("/jbm.ttf")
-        WordDisplay.setFont(font);
+        Word.setFont(font);
     }
 
     p.setup = () => {

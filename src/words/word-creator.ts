@@ -1,6 +1,7 @@
 import NormalWord from "./word-types/normal-word";
 import MultiplierWord from "./word-types/multiplier-word";
 import SlowWord from "./word-types/slow-word";
+import PurgeWord from "./word-types/purge-word";
 
 class WordCreator {
     private data: string[];
@@ -8,7 +9,7 @@ class WordCreator {
     private wordTypes = [
         {
             wordType: NormalWord,
-            probability: 0.8
+            probability: 0.5
         },
         {
             wordType: MultiplierWord,
@@ -17,6 +18,10 @@ class WordCreator {
         {
             wordType: SlowWord,
             probability: 0.1
+        },
+        {
+            wordType: PurgeWord,
+            probability: 0.3
         }
     ]
 

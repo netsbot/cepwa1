@@ -31238,90 +31238,6 @@ var _default = exports.default = MainInfoDisplay;
 module.exports = {
   "words": ["a", "abandon", "ability", "able", "abolish", "abortion", "about", "above", "abroad", "absence", "absent", "absolute", "absolutely", "absorb", "abstract", "absurd", "abundance", "abuse", "academic", "academy", "accelerate", "accent", "accept", "acceptable", "acceptance", "access", "accessible", "accident", "accidentally", "accommodate", "accommodation", "accompany", "accomplish", "accomplishment", "accordance", "according to", "accordingly", "account", "accountability", "accountable", "accountant", "accounting", "accumulate", "accumulation", "accuracy", "accurate", "accurately", "accusation", "accuse", "accused", "achieve", "achievement", "acid", "acknowledge", "acquire", "acquisition", "acre", "across", "act", "action", "activate", "activation", "active", "activist", "activity", "actor", "actress", "actual", "actually", "acute", "ad", "adapt", "adaptation", "add", "addiction", "addition", "additional", "additionally", "address", "adequate", "adequately", "adhere", "adjacent", "adjust", "adjustment", "administer", "administration", "administrative", "administrator", "admire", "admission", "admit", "adolescent", "adopt", "adoption", "adult", "advance", "advanced", "advantage", "adventure", "adverse", "advertise", "advertisement", "advertising", "advice", "advise", "advocate", "esthetic", "affair", "affect", "affection", "afford", "affordable", "afraid", "after", "aftermath", "afternoon", "afterwards", "again", "against", "age", "aged", "agency", "agenda", "agent", "aggression", "aggressive", "ago", "agree", "agreement", "agricultural", "agriculture", "ah", "ahead", "aid", "aide", "AIDS", "aim", "air", "aircraft", "airline", "airport", "alarm", "albeit", "album", "alcohol", "alcoholic", "alert", "alien", "align", "alignment", "alike", "alive", "all", "all right", "allegation", "allege", "allegedly", "alliance", "allocate", "allocation", "allow", "allowance", "ally", "almost", "alone", "along", "alongside", "already", "also", "alter", "alternative", "although", "altogether", "aluminum", "always", "amateur", "amazed", "amazing", "ambassador", "ambition", "ambitious", "ambulance", "amend", "amendment", "amid", "among", "amount", "amusing", "analogy", "analyze", "analysis", "analyst", "ancestor", "anchor", "ancient", "and", "angel", "anger", "angle", "angrily", "angry", "animal", "animation", "ankle", "anniversary", "announce", "announcement", "annoy", "annoyed", "annoying", "annual", "annually", "anonymous", "another", "answer", "anticipate", "anxiety", "anxious", "any", "any more", "anybody", "anyone", "anything", "anyway", "anywhere", "apart", "apartment", "apologize", "apology", "app", "apparatus", "apparent", "apparently", "appeal", "appealing", "appear", "appearance", "appetite", "applaud", "apple", "applicable", "applicant", "application", "apply", "appoint", "appointment", "appreciate", "appreciation", "approach", "appropriate", "appropriately", "approval", "approve", "approximately", "April", "arbitrary", "architect", "architectural", "architecture", "archive", "area", "arena", "arguably", "argue", "argument", "arise", "arm", "armed", "arms", "army", "around", "arrange", "arrangement", "array", "arrest", "arrival", "arrive", "arrow", "art", "article", "articulate", "artificial", "artist", "artistic", "artwork", "as", "ash", "ashamed", "aside", "ask", "asleep", "aspect", "aspiration", "aspire", "assassination", "assault", "assemble", "assembly", "assert", "assertion", "assess", "assessment", "asset", "assign", "assignment", "assist", "assistance", "assistant", "associate", "associated", "association", "assume", "assumption", "assurance", "assure", "astonishing", "asylum", "at", "athlete", "atmosphere", "atrocity", "attach", "attachment", "attack", "attain", "attempt", "attend", "attendance", "attention", "attitude", "attorney", "attract", "attraction", "attractive", "attribute", "auction", "audience", "audio", "audit", "August", "aunt", "authentic", "author", "authority", "authorize", "auto", "automatic", "automatically", "autonomy", "autumn", "availability", "available", "average", "avoid", "await", "award", "aware", "awareness", "away", "awful", "awkward", "baby", "back", "backdrop", "background", "backing", "backup", "backwards", "bacteria", "bad", "badge", "badly", "bag", "bail", "bake", "balance", "balanced", "ball", "ballet", "balloon", "ballot", "ban", "banana", "band", "bank", "banner", "bar", "bare", "barely", "bargain", "barrel", "barrier", "base", "baseball", "based", "basement", "basic", "basically", "basis", "basket", "basketball", "bass", "bat", "bath", "bathroom", "battery", "battle", "battlefield", "bay", "be", "beach", "beam", "bean", "bear", "beast", "beat", "beautiful", "beauty", "because", "become", "bed", "bedroom", "bee", "beef", "beer", "before", "beg", "begin", "beginning", "behalf", "behave", "behavior", "behind", "being", "belief", "believe", "bell", "belong", "beloved", "below", "belt", "bench", "benchmark", "bend", "beneath", "beneficial", "beneficiary", "benefit", "bent", "beside", "besides", "best", "bet", "betray", "better", "between", "beyond", "bias", "bicycle", "bid", "big", "bike", "bill", "billion", "bin", "bind", "biography", "biological", "biology", "bird", "birth", "birthday", "biscuit", "bishop", "bit", "bite", "bitter", "bizarre", "black", "blade", "blame", "blank", "blanket", "blast", "bleed", "blend", "bless", "blessing", "blind", "block", "blog", "blond", "blood", "blow", "blue", "board", "boast", "boat", "body", "boil", "bold", "bomb", "bombing", "bond", "bone", "bonus", "book", "booking", "boom", "boost", "boot", "border", "bored", "boring", "born", "borrow", "boss", "both", "bother", "bottle", "bottom", "bounce", "bound", "boundary", "bow", "bowl", "box", "boy", "boyfriend", "brain", "branch", "brand", "brave", "breach", "bread", "break", "breakdown", "breakfast", "breakthrough", "breast", "breath", "breathe", "breathing", "breed", "brick", "bride", "bridge", "brief", "briefly", "bright", "brilliant", "bring", "broad", "broadband", "broadcast", "broadcaster", "broadly", "broken", "brother", "brown", "browser", "brush", "brutal", "bubble", "buck", "buddy", "budget", "buffer", "bug", "build", "building", "bulk", "bullet", "bunch", "burden", "bureaucracy", "burial", "burn", "burst", "bury", "bus", "bush", "business", "businessman", "busy", "but", "butter", "button", "buy", "by", "bye", "cabin", "cabinet", "cable", "cafe", "cake", "calculate", "calculation", "call", "calm", "camera", "camp", "campaign", "camping", "campus", "can", "canal", "cancel", "cancer", "candidate", "candle", "cannot", "canvas", "cap", "capability", "capable", "capacity", "capital", "capitalism", "capitalist", "captain", "capture", "car", "carbon", "card", "care", "career", "careful", "carefully", "careless", "cargo", "carpet", "carriage", "carrot", "carry", "cartoon", "carve", "case", "cash", "casino", "cast", "castle", "casual", "casualty", "cat", "catalogue", "catch", "category", "cater", "cattle", "cause", "caution", "cautious", "cave", "CD", "cease", "ceiling", "celebrate", "celebration", "celebrity", "cell", "cemetery", "cent", "central", "center", "century", "ceremony", "certain", "certainly", "certainty", "certificate", "chain", "chair", "chairman", "challenge", "challenging", "chamber", "champion", "championship", "chance", "change", "channel", "chaos", "chapter", "character", "characteristic", "characterize", "charge", "charity", "charm", "charming", "chart", "charter", "chase", "chat", "cheap", "cheat", "check", "cheek", "cheer", "cheerful", "cheese", "chef", "chemical", "chemistry", "chest", "chicken", "chief", "child", "childhood", "chip", "chocolate", "choice", "choir", "choose", "chop", "chronic", "chunk", "church", "cigarette", "cinema", "circle", "circuit", "circulate", "circulation", "circumstance", "cite", "citizen", "citizenship", "city", "civic", "civil", "civilian", "civilization", "claim", "clarify", "clarity", "clash", "class", "classic", "classical", "classification", "classify", "classroom", "clause", "clean", "cleaning", "clear", "clearly", "clerk", "clever", "click", "client", "cliff", "climate", "climb", "cling", "clinic", "clinical", "clip", "clock", "close", "closed", "closely", "closure", "cloth", "clothes", "clothing", "cloud", "club", "clue", "cluster", "coach", "coal", "coalition", "coast", "coastal", "coat", "cocktail", "code", "coffee", "cognitive", "coin", "coincide", "coincidence", "cold", "collaborate", "collaboration", "collapse", "colleague", "collect", "collection", "collective", "collector", "college", "collision", "colonial", "colony", "color", "colored", "colorful", "column", "columnist", "combat", "combination", "combine", "come", "comedy", "comfort", "comfortable", "comic", "command", "commander", "commence", "comment", "commentary", "commentator", "commerce", "commercial", "commission", "commissioner", "commit", "commitment", "committee", "commodity", "common", "commonly", "communicate", "communication", "communist", "community", "companion", "company", "comparable", "comparative", "compare", "comparison", "compassion", "compel", "compelling", "compensate", "compensation", "compete", "competence", "competent", "competition", "competitive", "competitor", "compile", "complain", "complaint", "complement", "complete", "completely", "completion", "complex", "complexity", "compliance", "complicated", "complication", "comply", "component", "compose", "composer", "composition", "compound", "comprehensive", "comprise", "compromise", "compulsory", "compute", "computer", "conceal", "concede", "conceive", "concentrate", "concentration", "concept", "conception", "concern", "concerned", "concert", "concession", "conclude", "conclusion", "concrete", "condemn", "condition", "conduct", "confer", "conference", "confess", "confession", "confidence", "confident", "configuration", "confine", "confirm", "confirmation", "conflict", "confront", "confrontation", "confuse", "confused", "confusing", "confusion", "congratulate", "congregation", "congressional", "connect", "connected", "connection", "conquer", "conscience", "conscious", "consciousness", "consecutive", "consensus", "consent", "consequence", "consequently", "conservation", "conservative", "conserve", "consider", "considerable", "considerably", "consideration", "consist", "consistency", "consistent", "consistently", "consolidate", "conspiracy", "constant", "constantly", "constituency", "constitute", "constitution", "constitutional", "constraint", "construct", "construction", "consult", "consultant", "consultation", "consume", "consumer", "consumption", "contact", "contain", "container", "contemplate", "contemporary", "contempt", "contend", "contender", "content", "contention", "contest", "context", "continent", "continually", "continue", "continuous", "contract", "contractor", "contradiction", "contrary", "contrast", "contribute", "contribution", "contributor", "control", "controversial", "controversy", "convenience", "convenient", "convention", "conventional", "conversation", "conversion", "convert", "convey", "convict", "conviction", "convince", "convinced", "convincing", "cook", "cooker", "cooking", "cool", "cooperate", "cooperative", "coordinate", "coordination", "coordinator", "cop", "cope", "copper", "copy", "copyright", "core", "corner", "corporate", "corporation", "correct", "correction", "correctly", "correlate", "correlation", "correspond", "correspondence", "correspondent", "corresponding", "corridor", "corrupt", "corruption", "cost", "costly", "costume", "cottage", "cotton", "could", "council", "councillor", "counseling", "counselor", "count", "counter", "counterpart", "countless", "country", "countryside", "county", "coup", "couple", "courage", "course", "court", "courtesy", "cousin", "cover", "coverage", "covered", "cow", "crack", "craft", "crash", "crawl", "crazy", "cream", "create", "creation", "creative", "creativity", "creator", "creature", "credibility", "credible", "credit", "creep", "crew", "crime", "criminal", "crisis", "criterion", "critic", "critical", "critically", "criticism", "criticize", "critique", "crop", "cross", "crowd", "crowded", "crown", "crucial", "crude", "cruel", "cruise", "crush", "cry", "crystal", "cue", "cult", "cultivate", "cultural", "culture", "cup", "cupboard", "cure", "curiosity", "curious", "curly", "currency", "current", "currently", "curriculum", "curtain", "curve", "curved", "custody", "custom", "customer", "cut", "cute", "cutting", "cycle", "cynical", "dad", "daily", "dairy", "dam", "damage", "damaging", "dance", "dancer", "dancing", "danger", "dangerous", "dare", "dark", "darkness", "data", "database", "date", "daughter", "dawn", "day", "dead", "deadline", "deadly", "deal", "dealer", "dear", "death", "debate", "debris", "debt", "debut", "decade", "December", "decent", "decide", "decision", "decision-making", "decisive", "deck", "declaration", "declare", "decline", "decorate", "decoration", "decrease", "dedicated", "dedication", "deed", "deem", "deep", "deeply", "default", "defeat", "defect", "defense", "defend", "defender", "defensive", "deficiency", "deficit", "define", "definite", "definitely", "definition", "defy", "degree", "delay", "delegate", "delegation", "delete", "deliberate", "deliberately", "delicate", "delicious", "delight", "delighted", "deliver", "delivery", "demand", "democracy", "democratic", "demon", "demonstrate", "demonstration", "denial", "denounce", "dense", "density", "dentist", "deny", "depart", "department", "departure", "depend", "dependence", "dependent", "depict", "deploy", "deployment", "deposit", "depressed", "depressing", "depression", "deprive", "depth", "deputy", "derive", "descend", "descent", "describe", "description", "desert", "deserve", "design", "designate", "designer", "desirable", "desire", "desk", "desktop", "desperate", "desperately", "despite", "destination", "destroy", "destruction", "destructive", "detail", "detailed", "detain", "detect", "detection", "detective", "detention", "deteriorate", "determination", "determine", "determined", "devastate", "develop", "development", "device", "devil", "devise", "devote", "diagnose", "diagnosis", "diagram", "dialogue", "diamond", "diary", "dictate", "dictator", "dictionary", "die", "diet", "differ", "difference", "different", "differentiate", "differently", "difficult", "difficulty", "dig", "digital", "dignity", "dilemma", "dimension", "diminish", "dinner", "dip", "diplomat", "diplomatic", "direct", "direction", "directly", "director", "directory", "dirt", "dirty", "disability", "disabled", "disadvantage", "disagree", "disagreement", "disappear", "disappoint", "disappointed", "disappointing", "disappointment", "disaster", "disastrous", "disc", "discard", "discharge", "discipline", "disclose", "disclosure", "discount", "discourage", "discourse", "discover", "discovery", "discretion", "discrimination", "discuss", "discussion", "disease", "dish", "dishonest", "disk", "dislike", "dismiss", "dismissal", "disorder", "displace", "display", "disposal", "dispose", "dispute", "disrupt", "disruption", "dissolve", "distance", "distant", "distinct", "distinction", "distinctive", "distinguish", "distort", "distract", "distress", "distribute", "distribution", "district", "disturb", "disturbing", "dive", "diverse", "diversity", "divert", "divide", "divine", "division", "divorce", "divorced", "do", "doctor", "doctrine", "document", "documentary", "documentation", "dog", "dollar", "domain", "domestic", "dominance", "dominant", "dominate", "donate", "donation", "donor", "door", "dose", "dot", "double", "doubt", "down", "download", "downstairs", "downtown", "downwards", "dozen", "draft", "drag", "drain", "drama", "dramatic", "dramatically", "draw", "drawing", "dream", "dress", "dressed", "drift", "drink", "drive", "driver", "driving", "drop", "drought", "drown", "drug", "drum", "drunk", "dry", "dual", "dub", "due", "dull", "dumb", "dump", "duo", "duration", "during", "dust", "duty", "DVD", "dynamic", "each", "eager", "ear", "early", "earn", "earnings", "earth", "earthquake", "ease", "easily", "east", "eastern", "easy", "eat", "echo", "ecological", "economic", "economics", "economist", "economy", "edge", "edit", "edition", "editor", "editorial", "educate", "educated", "education", "educational", "educator", "effect", "effective", "effectively", "effectiveness", "efficiency", "efficient", "efficiently", "effort", "egg", "ego", "eight", "eighteen", "eighty", "either", "elaborate", "elbow", "elderly", "elect", "election", "electoral", "electric", "electrical", "electricity", "electronic", "electronics", "elegant", "element", "elementary", "elephant", "elevate", "eleven", "eligible", "eliminate", "elite", "else", "elsewhere", "email", "embark", "embarrassed", "embarrassing", "embarrassment", "embassy", "embed", "embody", "embrace", "emerge", "emergence", "emergency", "emission", "emotion", "emotional", "emotionally", "emphasis", "emphasize", "empire", "empirical", "employ", "employee", "employer", "employment", "empower", "empty", "enable", "enact", "encompass", "encounter", "encourage", "encouragement", "encouraging", "end", "endeavor", "ending", "endless", "endorse", "endorsement", "endure", "enemy", "energy", "enforce", "enforcement", "engage", "engaged", "engagement", "engaging", "engine", "engineer", "engineering", "enhance", "enjoy", "enjoyable", "enormous", "enough", "enquire", "enquiry", "enrich", "enroll", "ensue", "ensure", "enter", "enterprise", "entertain", "entertaining", "entertainment", "enthusiasm", "enthusiast", "enthusiastic", "entire", "entirely", "entitle", "entity", "entrance", "entrepreneur", "entry", "envelope", "environment", "environmental", "epidemic", "episode", "equal", "equality", "equally", "equation", "equip", "equipment", "equivalent", "era", "erect", "error", "erupt", "escalate", "escape", "especially", "essay", "essence", "essential", "essentially", "establish", "establishment", "estate", "estimate", "eternal", "ethic", "ethical", "ethnic", "euro", "evacuate", "evaluate", "evaluation", "even", "evening", "event", "eventually", "ever", "every", "everybody", "everyday", "everyone", "everything", "everywhere", "evidence", "evident", "evil", "evoke", "evolution", "evolutionary", "evolve", "exact", "exactly", "exaggerate", "exam", "examination", "examine", "example", "exceed", "excellence", "excellent", "except", "exception", "exceptional", "excess", "excessive", "exchange", "excited", "excitement", "exciting", "exclude", "exclusion", "exclusive", "exclusively", "excuse", "execute", "execution", "executive", "exercise", "exert", "exhibit", "exhibition", "exile", "exist", "existence", "exit", "exotic", "expand", "expansion", "expect", "expectation", "expected", "expedition", "expenditure", "expense", "expensive", "experience", "experienced", "experiment", "experimental", "expert", "expertise", "expire", "explain", "explanation", "explicit", "explicitly", "explode", "exploit", "exploitation", "exploration", "explore", "explosion", "explosive", "export", "expose", "exposure", "express", "expression", "extend", "extension", "extensive", "extensively", "extent", "external", "extra", "extract", "extraordinary", "extreme", "extremely", "extremist", "eye", "fabric", "fabulous", "face", "facilitate", "facility", "fact", "faction", "factor", "factory", "faculty", "fade", "fail", "failed", "failure", "fair", "fairly", "fairness", "faith", "fake", "fall", "false", "fame", "familiar", "family", "famous", "fan", "fancy", "fantastic", "fantasy", "far", "fare", "farm", "farmer", "farming", "fascinating", "fashion", "fashionable", "fast", "fasten", "fat", "fatal", "fate", "father", "fault", "favor", "favorable", "favorite", "fear", "feat", "feather", "feature", "February", "federal", "fee", "feed", "feedback", "feeding", "feel", "feeling", "fellow", "female", "feminist", "fence", "festival", "fever", "few", "fiber", "fiction", "field", "fierce", "fifteen", "fifth", "fifty", "fight", "fighting", "figure", "file", "fill", "film", "filmmaker", "filter", "final", "finally", "finance", "financial", "find", "finding", "fine", "finger", "finish", "fire", "firearm", "firefighter", "firework", "firm", "firmly", "first", "firstly", "fish", "fishing", "fit", "fitness", "five", "fix", "fixed", "fixture", "flag", "flame", "flash", "flat", "flavor", "flaw", "flawed", "flee", "fleet", "flesh", "flexibility", "flexible", "flight", "float", "flood", "floor", "flour", "flourish", "flow", "flower", "flu", "fluid", "fly", "flying", "focus", "fold", "folding", "folk", "follow", "following", "fond", "food", "fool", "foot", "footage", "football", "for", "forbid", "force", "forecast", "foreign", "foreigner", "forest", "forever", "forge", "forget", "forgive", "fork", "form", "formal", "format", "formation", "former", "formerly", "formula", "formulate", "forth", "forthcoming", "fortunate", "fortunately", "fortune", "forty", "forum", "forward", "fossil", "foster", "found", "foundation", "founder", "four", "fourteen", "fourth", "fraction", "fragile", "fragment", "frame", "framework", "franchise", "frankly", "fraud", "free", "freedom", "freely", "freeze", "frequency", "frequent", "frequently", "fresh", "Friday", "fridge", "friend", "friendly", "friendship", "frighten", "frightened", "frightening", "frog", "from", "front", "frozen", "fruit", "frustrated", "frustrating", "frustration", "fry", "fuel", "fulfill", "full", "full-time", "fully", "fun", "function", "functional", "fund", "fundamental", "fundamentally", "funding", "fundraising", "funeral", "funny", "fur", "furious", "furniture", "further", "furthermore", "future", "gain", "gallery", "gallon", "gambling", "game", "gaming", "gang", "gap", "garage", "garden", "gas", "gate", "gather", "gathering", "gay", "gaze", "gear", "gender", "gene", "general", "generally", "generate", "generation", "generic", "generous", "genetic", "genius", "genocide", "genre", "gentle", "gentleman", "genuine", "genuinely", "geography", "gesture", "get", "ghost", "giant", "gift", "gig", "girl", "girlfriend", "give", "glad", "glance", "glass", "glimpse", "global", "globalization", "globe", "glorious", "glory", "glove", "go", "goal", "god", "gold", "golden", "golf", "good", "goodbye", "goodness", "goods", "gorgeous", "govern", "governance", "government", "governor", "grab", "grace", "grade", "gradually", "graduate", "grain", "grand", "grandfather", "grandmother", "grandparent", "grant", "graphic", "graphics", "grasp", "grass", "grateful", "grave", "gravity", "great", "greatly", "green", "greenhouse", "greet", "gray", "grid", "grief", "grin", "grind", "grip", "grocery", "gross", "ground", "group", "grow", "growth", "guarantee", "guard", "guerrilla", "guess", "guest", "guidance", "guide", "guideline", "guilt", "guilty", "guitar", "gun", "gut", "guy", "gym", "habit", "habitat", "hail", "hair", "half", "halfway", "hall", "halt", "hand", "handful", "handle", "handling", "handy", "hang", "happen", "happily", "happiness", "happy", "harassment", "harbor", "hard", "hardly", "hardware", "harm", "harmful", "harmony", "harsh", "harvest", "hat", "hate", "hatred", "haunt", "have", "have to", "hazard", "he", "head", "headache", "headline", "headquarters", "heal", "health", "healthcare", "healthy", "hear", "hearing", "heart", "heat", "heating", "heaven", "heavily", "heavy", "heel", "height", "heighten", "helicopter", "hell", "hello", "helmet", "help", "helpful", "hence", "her", "herb", "here", "heritage", "hero", "hers", "herself", "hesitate", "hey", "hi", "hidden", "hide", "hierarchy", "high", "high-profile", "highlight", "highly", "highway", "hilarious", "hill", "him", "himself", "hint", "hip", "hire", "his", "historian", "historic", "historical", "history", "hit", "hobby", "hockey", "hold", "hole", "holiday", "hollow", "holy", "home", "homeland", "homeless", "homework", "honest", "honesty", "honor", "hook", "hope", "hopeful", "hopefully", "horizon", "horn", "horrible", "horror", "horse", "hospital", "host", "hostage", "hostile", "hostility", "hot", "hotel", "hour", "house", "household", "housing", "how", "however", "huge", "human", "humanitarian", "humanity", "humble", "humorous", "humor", "hundred", "hunger", "hungry", "hunt", "hunting", "hurricane", "hurry", "hurt", "husband", "hydrogen", "hypothesis", "I", "ice", "ice cream", "icon", "ID", "idea", "ideal", "identical", "identification", "identify", "identity", "ideological", "ideology", "idiot", "if", "ignorance", "ignore", "ill", "illegal", "illness", "illusion", "illustrate", "illustration", "image", "imagery", "imaginary", "imagination", "imagine", "immediate", "immediately", "immense", "immigrant", "immigration", "imminent", "immune", "impact", "impatient", "implement", "implementation", "implication", "imply", "import", "importance", "important", "impose", "impossible", "impress", "impressed", "impression", "impressive", "imprison", "imprisonment", "improve", "improvement", "in", "inability", "inadequate", "inappropriate", "incentive", "inch", "incidence", "incident", "inclined", "include", "included", "including", "inclusion", "income", "incorporate", "incorrect", "increase", "increasingly", "incredible", "incredibly", "incur", "indeed", "independence", "independent", "index", "indicate", "indication", "indicator", "indictment", "indigenous", "indirect", "individual", "indoor", "indoors", "induce", "indulge", "industrial", "industry", "inequality", "inevitable", "inevitably", "infamous", "infant", "infect", "infection", "infer", "inflation", "inflict", "influence", "influential", "info", "inform", "informal", "information", "infrastructure", "ingredient", "inhabitant", "inherent", "inherit", "inhibit", "initial", "initially", "initiate", "initiative", "inject", "injection", "injure", "injured", "injury", "injustice", "ink", "inmate", "inner", "innocent", "innovation", "innovative", "input", "inquiry", "insect", "insert", "insertion", "inside", "insider", "insight", "insist", "inspect", "inspection", "inspector", "inspiration", "inspire", "install", "installation", "instance", "instant", "instantly", "instead", "instinct", "institute", "institution", "institutional", "instruct", "instruction", "instructor", "instrument", "instrumental", "insufficient", "insult", "insurance", "intact", "intake", "integral", "integrate", "integrated", "integration", "integrity", "intellectual", "intelligence", "intelligent", "intend", "intended", "intense", "intensify", "intensity", "intensive", "intent", "intention", "interact", "interaction", "interactive", "interest", "interested", "interesting", "interface", "interfere", "interference", "interim", "interior", "intermediate", "internal", "international", "internet", "interpret", "interpretation", "interrupt", "interval", "intervene", "intervention", "interview", "intimate", "into", "intriguing", "introduce", "introduction", "invade", "invasion", "invent", "invention", "invest", "investigate", "investigation", "investigator", "investment", "investor", "invisible", "invitation", "invite", "invoke", "involve", "involved", "involvement", "iron", "ironic", "ironically", "irony", "irrelevant", "island", "isolate", "isolated", "isolation", "issue", "IT", "it", "item", "its", "itself", "jacket", "jail", "jam", "January", "jazz", "jeans", "jet", "jewelry", "job", "join", "joint", "joke", "journal", "journalism", "journalist", "journey", "joy", "judge", "judgement", "judicial", "juice", "July", "jump", "junction", "June", "junior", "jurisdiction", "jury", "just", "justice", "justification", "justify", "keen", "keep", "key", "keyboard", "kick", "kid", "kidnap", "kidney", "kill", "killing", "kilometer", "kind", "king", "kingdom", "kiss", "kit", "kitchen", "knee", "knife", "knock", "know", "knowledge", "lab", "label", "laboratory", "labor", "lack", "lad", "ladder", "lady", "lake", "lamp", "land", "landing", "landlord", "landmark", "landscape", "lane", "language", "lap", "laptop", "large", "large-scale", "largely", "laser", "last", "late", "lately", "later", "latest", "latter", "laugh", "laughter", "launch", "law", "lawn", "lawsuit", "lawyer", "lay", "layer", "layout", "lazy", "lead", "leader", "leadership", "leading", "leaf", "leaflet", "league", "leak", "lean", "leap", "learn", "learning", "least", "leather", "leave", "lecture", "left", "leg", "legacy", "legal", "legend", "legendary", "legislation", "legislative", "legislature", "legitimate", "leisure", "lemon", "lend", "length", "lengthy", "lens", "lesbian", "less", "lesser", "lesson", "let", "lethal", "letter", "level", "liable", "liberal", "liberation", "liberty", "library", "lie", "life", "lifelong", "lifestyle", "lifetime", "lift", "light", "lighting", "like", "likelihood", "likely", "likewise", "limb", "limit", "limitation", "limited", "line", "line-up", "linear", "linger", "link", "lion", "lip", "liquid", "list", "listen", "listener", "listing", "literacy", "literally", "literary", "literature", "liter", "litter", "little", "live", "lively", "liver", "living", "load", "loan", "lobby", "local", "locate", "located", "location", "lock", "log", "logic", "logical", "logo", "lonely", "long", "long-standing", "long-term", "long-time", "look", "loom", "loop", "loose", "lord", "lorry", "lose", "loss", "lost", "lot", "lottery", "loud", "loudly", "love", "lovely", "low", "lower", "loyal", "loyalty", "luck", "lucky", "lunch", "lung", "luxury", "lyric", "machine", "machinery", "mad", "magazine", "magic", "magical", "magistrate", "magnetic", "magnificent", "magnitude", "mail", "main", "mainland", "mainly", "mainstream", "maintain", "maintenance", "major", "majority", "make", "make-up", "making", "male", "mall", "man", "manage", "management", "manager", "mandate", "mandatory", "manifest", "manipulate", "manipulation", "manner", "manufacture", "manufacturing", "manuscript", "many", "map", "marathon", "March", "march", "margin", "marginal", "marine", "mark", "marker", "market", "marketing", "marketplace", "marriage", "married", "marry", "martial", "mask", "mass", "massacre", "massive", "master", "match", "matching", "mate", "material", "mathematical", "mathematics", "math", "matter", "mature", "maximize", "maximum", "May", "may", "maybe", "mayor", "me", "meal", "mean", "meaning", "meaningful", "means", "meantime", "meanwhile", "measure", "measurement", "meat", "mechanic", "mechanical", "mechanism", "medal", "media", "medical", "medication", "medicine", "medieval", "meditation", "medium", "meet", "meeting", "melody", "melt", "member", "membership", "memo", "memoir", "memorable", "memorial", "memory", "mental", "mention", "mentor", "menu", "merchant", "mercy", "mere", "merely", "merge", "merger", "merit", "mess", "message", "metal", "metaphor", "method", "methodology", "meter", "middle", "midnight", "midst", "might", "migration", "mild", "mile", "militant", "military", "militia", "milk", "mill", "million", "mind", "mine", "miner", "mineral", "minimal", "minimize", "minimum", "mining", "minister", "ministry", "minor", "minority", "minute", "miracle", "mirror", "miserable", "misery", "misleading", "miss", "missile", "missing", "mission", "mistake", "mix", "mixed", "mixture", "mob", "mobile", "mobility", "mobilize", "mode", "model", "moderate", "modern", "modest", "modification", "modify", "moment", "momentum", "Monday", "money", "monitor", "monk", "monkey", "monopoly", "monster", "month", "monthly", "monument", "mood", "moon", "moral", "morality", "more", "moreover", "morning", "mortgage", "mosque", "most", "mostly", "mother", "motion", "motivate", "motivation", "motive", "motor", "motorcycle", "motorist", "mount", "mountain", "mouse", "mouth", "move", "movement", "movie", "moving", "much", "mud", "multiple", "multiply", "mom", "municipal", "murder", "muscle", "museum", "music", "musical", "musician", "must", "mutual", "my", "myself", "mysterious", "mystery", "myth", "nail", "naked", "name", "namely", "narrative", "narrow", "nasty", "nation", "national", "nationwide", "native", "natural", "naturally", "nature", "naval", "navigation", "near", "nearby", "nearly", "neat", "necessarily", "necessary", "necessity", "neck", "need", "needle", "negative", "neglect", "negotiate", "negotiation", "neighbor", "neighborhood", "neighboring", "neither", "nerve", "nervous", "nest", "net", "network", "neutral", "never", "nevertheless", "new", "newly", "news", "newsletter", "newspaper", "next", "next to", "nice", "niche", "night", "nightmare", "nine", "nineteen", "ninety", "no", "no one", "noble", "nobody", "nod", "noise", "noisy", "nominate", "nomination", "nominee", "non-profit", "none", "nonetheless", "nonsense", "noon", "nor", "norm", "normal", "normally", "north", "northern", "nose", "not", "notable", "notably", "note", "notebook", "nothing", "notice", "notify", "notion", "notorious", "novel", "novelist", "November", "now", "nowadays", "nowhere", "nuclear", "number", "numerous", "nurse", "nursery", "nursing", "nut", "nutrition", "o'clock", "obesity", "obey", "object", "objection", "objective", "obligation", "oblige", "observation", "observe", "observer", "obsess", "obsession", "obstacle", "obtain", "obvious", "obviously", "occasion", "occasional", "occasionally", "occupation", "occupy", "occur", "occurrence", "ocean", "October", "odd", "odds", "of", "off", "offense", "offend", "offender", "offensive", "offer", "offering", "office", "officer", "official", "offspring", "often", "oh", "oil", "OK", "old", "old-fashioned", "on", "once", "one", "ongoing", "onion", "online", "only", "onto", "open", "opening", "openly", "opera", "operate", "operation", "operational", "operator", "opinion", "opponent", "opportunity", "oppose", "opposed", "opposite", "opposition", "opt", "optical", "optimism", "optimistic", "option", "or", "oral", "orange", "orchestra", "order", "ordinary", "organ", "organic", "organization", "organizational", "organize", "organized", "organizer", "orientation", "origin", "original", "originally", "originate", "other", "otherwise", "ought", "our", "ours", "ourselves", "out", "outbreak", "outcome", "outdoor", "outdoors", "outer", "outfit", "outing", "outlet", "outline", "outlook", "output", "outrage", "outside", "outsider", "outstanding", "oven", "over", "overall", "overcome", "overlook", "overly", "overnight", "overseas", "oversee", "overturn", "overwhelm", "overwhelming", "owe", "own", "owner", "ownership", "oxygen", "pace", "pack", "package", "packet", "pad", "page", "pain", "painful", "paint", "painter", "painting", "pair", "palace", "pale", "palm", "pan", "panel", "panic", "pants", "paper", "parade", "paragraph", "parallel", "parameter", "parent", "parental", "parish", "park", "parking", "parliament", "parliamentary", "part", "part-time", "partial", "partially", "participant", "participate", "participation", "particular", "particularly", "partly", "partner", "partnership", "party", "pass", "passage", "passenger", "passing", "passion", "passionate", "passive", "passport", "password", "past", "pastor", "patch", "patent", "path", "pathway", "patience", "patient", "patrol", "patron", "pattern", "pause", "pay", "payment", "peace", "peaceful", "peak", "peasant", "peculiar", "peer", "pen", "penalty", "pencil", "penny", "pension", "people", "pepper", "per", "percent", "perceive", "percentage", "perception", "perfect", "perfectly", "perform", "performance", "perhaps", "period", "permanent", "permanently", "permission", "permit", "persist", "persistent", "person", "personal", "personality", "personally", "personnel", "perspective", "persuade", "pet", "petition", "gasoline", "phase", "phenomenon", "philosopher", "philosophical", "philosophy", "phone", "photo", "photograph", "photographer", "photography", "phrase", "physical", "physician", "physics", "piano", "pick", "picture", "piece", "pig", "pile", "pill", "pilot", "pin", "pink", "pioneer", "pipe", "pipeline", "pirate", "pit", "pitch", "pity", "place", "placement", "plain", "plan", "plane", "planet", "planning", "plant", "plastic", "plate", "platform", "play", "player", "plea", "plead", "pleasant", "please", "pleased", "pleasure", "pledge", "plenty", "plot", "plug", "plunge", "plus", "pocket", "poem", "poet", "poetry", "point", "pointed", "poison", "poisonous", "pole", "police", "policeman", "policy", "polite", "political", "politician", "politics", "poll", "pollution", "pond", "pool", "poor", "pop", "popular", "popularity", "population", "port", "portfolio", "portion", "portrait", "portray", "pose", "position", "positive", "possess", "possession", "possibility", "possible", "possibly", "post", "post-war", "poster", "postpone", "pot", "potato", "potential", "potentially", "pound", "pour", "poverty", "powder", "power", "powerful", "practical", "practitioner", "praise", "pray", "prayer", "preach", "precede", "precedent", "precious", "precise", "precisely", "precision", "predator", "predecessor", "predict", "predictable", "prediction", "predominantly", "prefer", "preference", "pregnancy", "pregnant", "prejudice", "preliminary", "premier", "premise", "premium", "preparation", "prepare", "prepared", "prescribe", "prescription", "presence", "present", "presentation", "presently", "preservation", "preserve", "preside", "presidency", "president", "presidential", "press", "pressure", "prestigious", "presumably", "presume", "pretend", "pretty", "prevail", "prevalence", "prevent", "prevention", "previous", "previously", "prey", "price", "pride", "priest", "primarily", "primary", "prime", "prince", "princess", "principal", "principle", "print", "printer", "printing", "prior", "priority", "prison", "prisoner", "privacy", "private", "privatization", "privilege", "prize", "probability", "probable", "probably", "probe", "problem", "problematic", "procedure", "proceed", "proceeding", "proceeds", "process", "processing", "processor", "proclaim", "produce", "producer", "product", "production", "productive", "productivity", "profession", "professional", "professor", "profile", "profit", "profitable", "profound", "programming", "progress", "progressive", "prohibit", "project", "projection", "prominent", "promise", "promising", "promote", "promotion", "prompt", "pronounce", "pronounced", "proof", "propaganda", "proper", "properly", "property", "proportion", "proposal", "propose", "proposition", "prosecute", "prosecution", "prosecutor", "prospect", "prospective", "prosperity", "protect", "protection", "protective", "protein", "protest", "protester", "protocol", "proud", "prove", "provide", "province", "provincial", "provision", "provoke", "psychiatric", "psychological", "psychologist", "psychology", "pub", "public", "publication", "publicity", "publish", "publishing", "pull", "pulse", "pump", "punch", "punish", "punishment", "punk", "pupil", "purchase", "pure", "purely", "purple", "purpose", "pursue", "pursuit", "push", "put", "puzzle", "qualification", "qualified", "qualify", "quality", "quantity", "quarter", "queen", "query", "quest", "question", "questionnaire", "queue", "quick", "quickly", "quiet", "quietly", "quit", "quite", "quota", "quotation", "quote", "race", "racial", "racing", "racism", "racist", "radar", "radiation", "radical", "radio", "rage", "raid", "rail", "railway", "rain", "raise", "rally", "random", "range", "rank", "ranking", "rapid", "rapidly", "rare", "rarely", "rat", "rate", "rather", "rating", "ratio", "rational", "raw", "ray", "reach", "react", "reaction", "read", "reader", "readily", "reading", "ready", "real", "realistic", "reality", "realization", "realize", "really", "realm", "rear", "reason", "reasonable", "reasonably", "reasoning", "reassure", "rebel", "rebellion", "rebuild", "recall", "receipt", "receive", "receiver", "recent", "recently", "reception", "recession", "recipe", "recipient", "reckon", "recognition", "recognize", "recommend", "recommendation", "reconstruction", "record", "recording", "recount", "recover", "recovery", "recruit", "recruitment", "recycle", "red", "reduce", "reduction", "refer", "referee", "reference", "referendum", "reflect", "reflection", "reform", "refuge", "refugee", "refusal", "refuse", "regain", "regard", "regardless", "regime", "region", "regional", "register", "registration", "regret", "regular", "regularly", "regulate", "regulation", "regulator", "regulatory", "rehabilitation", "reign", "reinforce", "reject", "rejection", "relate", "related", "relation", "relationship", "relative", "relatively", "relax", "relaxed", "relaxing", "release", "relevance", "relevant", "reliability", "reliable", "relief", "relieve", "relieved", "religion", "religious", "reluctant", "rely", "remain", "remainder", "remains", "remark", "remarkable", "remarkably", "remedy", "remember", "remind", "reminder", "remote", "removal", "remove", "render", "renew", "renowned", "rent", "rental", "repair", "repeat", "repeated", "replace", "replacement", "reply", "report", "reportedly", "reporter", "reporting", "represent", "representation", "representative", "reproduce", "reproduction", "republic", "reputation", "request", "require", "requirement", "rescue", "research", "researcher", "resemble", "reservation", "reserve", "reside", "residence", "resident", "residential", "residue", "resign", "resignation", "resist", "resistance", "resolution", "resolve", "resort", "resource", "respect", "respective", "respectively", "respond", "response", "responsibility", "responsible", "rest", "restaurant", "restoration", "restore", "restraint", "restrict", "restriction", "result", "resume", "retail", "retain", "retire", "retired", "retirement", "retreat", "retrieve", "return", "reveal", "revelation", "revenge", "revenue", "reverse", "review", "revise", "revision", "revival", "revive", "revolution", "revolutionary", "reward", "rhetoric", "rhythm", "rice", "rich", "rid", "ride", "ridiculous", "rifle", "right", "ring", "riot", "rip", "rise", "risk", "risky", "ritual", "rival", "river", "road", "rob", "robbery", "robot", "robust", "rock", "rocket", "rod", "role", "roll", "romance", "romantic", "roof", "room", "root", "rope", "rose", "rotate", "rotation", "rough", "roughly", "round", "route", "routine", "row", "royal", "rub", "rubber", "rubbish", "rude", "rugby", "ruin", "rule", "ruling", "rumor", "run", "runner", "running", "rural", "rush", "sack", "sacred", "sacrifice", "sad", "sadly", "safe", "safety", "sail", "sailing", "sailor", "saint", "sake", "salad", "salary", "sale", "salt", "same", "sample", "sanction", "sand", "sandwich", "satellite", "satisfaction", "satisfied", "satisfy", "Saturday", "sauce", "save", "saving", "say", "scale", "scan", "scandal", "scare", "scared", "scary", "scattered", "scenario", "scene", "skeptical", "schedule", "scheme", "scholar", "scholarship", "school", "science", "scientific", "scientist", "scope", "score", "scratch", "scream", "screen", "screening", "screw", "script", "scrutiny", "sculpture", "sea", "seal", "search", "season", "seat", "second", "secondary", "secondly", "secret", "secretary", "section", "sector", "secular", "secure", "security", "see", "seed", "seek", "seeker", "seem", "seemingly", "segment", "seize", "seldom", "select", "selection", "selective", "self", "sell", "seminar", "senator", "send", "senior", "sensation", "sense", "sensible", "sensitive", "sensitivity", "sentence", "sentiment", "separate", "separation", "September", "sequence", "serial", "series", "serious", "seriously", "servant", "serve", "service", "session", "set", "set-up", "setting", "settle", "settlement", "settler", "seven", "seventeen", "seventy", "several", "severe", "severely", "sex", "sexual", "sexuality", "sexy", "shade", "shadow", "shake", "shall", "shallow", "shame", "shape", "shaped", "share", "shareholder", "sharp", "shatter", "she", "shed", "sheep", "sheer", "sheet", "shelf", "shell", "shelter", "shift", "shine", "shiny", "ship", "shipping", "shirt", "shock", "shocked", "shocking", "shoe", "shoot", "shooting", "shop", "shopping", "shore", "short", "short-term", "shortage", "shortly", "shot", "should", "shoulder", "shout", "show", "shower", "shrink", "shrug", "shut", "shy", "sibling", "sick", "side", "sigh", "sight", "sign", "signal", "signature", "significance", "significant", "significantly", "silence", "silent", "silk", "silly", "silver", "similar", "similarity", "similarly", "simple", "simply", "simulate", "simulation", "simultaneously", "sin", "since", "sincere", "sing", "singer", "singing", "single", "sink", "sir", "sister", "sit", "site", "situated", "situation", "six", "sixteen", "sixty", "size", "sketch", "ski", "skiing", "skill", "skilled", "skin", "skip", "skirt", "skull", "sky", "slam", "slap", "slash", "slave", "slavery", "sleep", "slice", "slide", "slight", "slightly", "slip", "slogan", "slope", "slot", "slow", "slowly", "small", "smart", "smartphone", "smash", "smell", "smile", "smoke", "smoking", "smooth", "snake", "snap", "snow", "so", "so-called", "soak", "soap", "soar", "soccer", "social", "socialist", "society", "sock", "soft", "software", "soil", "solar", "soldier", "sole", "solely", "solicitor", "solid", "solidarity", "solo", "solution", "solve", "some", "somebody", "somehow", "someone", "something", "sometime", "sometimes", "somewhat", "somewhere", "son", "song", "soon", "sophisticated", "sorry", "sort", "soul", "sound", "soup", "source", "south", "southern", "sovereignty", "space", "spam", "span", "spare", "spark", "speak", "speaker", "special", "specialist", "specialize", "specialized", "species", "specific", "specifically", "specification", "specify", "specimen", "spectacle", "spectacular", "spectator", "spectrum", "speculate", "speculation", "speech", "speed", "spell", "spelling", "spend", "spending", "sphere", "spice", "spicy", "spider", "spill", "spin", "spine", "spirit", "spiritual", "spite", "split", "spoil", "spoken", "spokesman", "spokesperson", "spokeswoman", "sponsor", "sponsorship", "spoon", "sport", "sporting", "spot", "spotlight", "spouse", "spread", "spring", "spy", "squad", "square", "squeeze", "stab", "stability", "stabilize", "stable", "stadium", "staff", "stage", "stair", "stake", "stall", "stamp", "stance", "stand", "standard", "standing", "star", "stare", "stark", "start", "starve", "state", "statement", "station", "statistic", "statistical", "statue", "status", "stay", "steadily", "steady", "steal", "steam", "steel", "steep", "steer", "stem", "step", "stereotype", "stick", "sticky", "stiff", "still", "stimulate", "stimulus", "stir", "stock", "stomach", "stone", "stop", "storage", "store", "storm", "story", "straight", "straightforward", "strain", "strand", "strange", "stranger", "strategic", "strategy", "stream", "street", "strength", "strengthen", "stress", "stretch", "strict", "strictly", "strike", "striking", "string", "strip", "strive", "stroke", "strong", "strongly", "structural", "structure", "struggle", "student", "studio", "study", "stuff", "stumble", "stun", "stunning", "stupid", "style", "subject", "submission", "submit", "subscriber", "subscription", "subsequent", "subsequently", "subsidy", "substance", "substantial", "substantially", "substitute", "substitution", "subtle", "suburb", "suburban", "succeed", "success", "successful", "successfully", "succession", "successive", "successor", "such", "suck", "sudden", "suddenly", "sue", "suffer", "suffering", "sufficient", "sufficiently", "sugar", "suggest", "suggestion", "suicide", "suit", "suitable", "suite", "sum", "summarize", "summary", "summer", "summit", "sun", "Sunday", "super", "superb", "superior", "supermarket", "supervise", "supervision", "supervisor", "supplement", "supply", "support", "supporter", "supportive", "suppose", "supposedly", "suppress", "supreme", "sure", "surely", "surface", "surge", "surgeon", "surgery", "surgical", "surplus", "surprise", "surprised", "surprising", "surrender", "surround", "surrounding", "surveillance", "survey", "survival", "survive", "survivor", "suspect", "suspend", "suspension", "suspicion", "suspicious", "sustain", "sustainable", "swallow", "swear", "sweater", "sweep", "sweet", "swim", "swimming", "swing", "switch", "sword", "symbol", "symbolic", "sympathetic", "sympathy", "symptom", "syndrome", "synthesis", "system", "systematic", "T-shirt", "table", "tablet", "tackle", "tactic", "tactical", "tag", "tail", "take", "tale", "talent", "talented", "talk", "tall", "tank", "tap", "tape", "target", "task", "taste", "tax", "taxi", "taxpayer", "tea", "teach", "teacher", "teaching", "team", "tear", "technical", "technique", "technological", "technology", "teenage", "teenager", "teens", "telephone", "television", "tell", "temperature", "temple", "temporarily", "temporary", "tempt", "ten", "tenant", "tend", "tendency", "tender", "tennis", "tension", "tent", "tenure", "term", "terminal", "terminate", "terms", "terrain", "terrible", "terribly", "terrific", "terrify", "territory", "terror", "terrorism", "terrorist", "test", "testify", "testimony", "testing", "text", "textbook", "texture", "than", "thank", "thankfully", "thanks", "that", "the", "theater", "theatrical", "theft", "their", "theirs", "them", "theme", "themselves", "then", "theology", "theoretical", "theory", "therapist", "therapy", "there", "thereafter", "thereby", "therefore", "thesis", "they", "thick", "thief", "thin", "thing", "think", "thinking", "third", "thirsty", "thirteen", "thirty", "this", "thorough", "thoroughly", "though", "thought", "thought-provoking", "thoughtful", "thousand", "thread", "threat", "threaten", "three", "threshold", "thrilled", "thrive", "throat", "through", "throughout", "throw", "thumb", "Thursday", "thus", "ticket", "tide", "tidy", "tie", "tight", "tighten", "till", "timber", "time", "timely", "timing", "tin", "tiny", "tip", "tired", "tissue", "title", "to", "tobacco", "today", "toe", "together", "toilet", "tolerance", "tolerate", "toll", "tomato", "tomorrow", "ton", "tone", "tongue", "tonight", "tonne", "too", "tool", "tooth", "top", "topic", "torture", "toss", "total", "totally", "touch", "tough", "tour", "tourism", "tourist", "tournament", "towards", "towel", "tower", "town", "toxic", "toy", "trace", "track", "trade", "trademark", "trading", "tradition", "traditional", "traffic", "tragedy", "tragic", "trail", "trailer", "train", "trainer", "training", "trait", "transaction", "transcript", "transfer", "transform", "transformation", "transit", "transition", "translate", "translation", "transmission", "transmit", "transparency", "transparent", "transport", "transportation", "trap", "trauma", "travel", "traveler", "treasure", "treat", "treatment", "treaty", "tree", "tremendous", "trend", "trial", "tribal", "tribe", "tribunal", "tribute", "trick", "trigger", "trillion", "trio", "trip", "triumph", "troop", "trophy", "tropical", "trouble", "troubled", "trousers", "truck", "true", "truly", "trust", "trustee", "truth", "try", "tsunami", "tube", "Tuesday", "tuition", "tune", "tunnel", "turn", "turnout", "turnover", "TV", "twelve", "twenty", "twice", "twin", "twist", "two", "type", "typical", "typically", "tire", "ugly", "ultimate", "ultimately", "umbrella", "unable", "unacceptable", "uncertainty", "uncle", "uncomfortable", "unconscious", "under", "undergo", "undergraduate", "underground", "underlying", "undermine", "understand", "understanding", "undertake", "underwear", "undoubtedly", "unemployed", "unemployment", "unexpected", "unfair", "unfold", "unfortunate", "unfortunately", "unhappy", "uniform", "unify", "union", "unique", "unit", "unite", "united", "unity", "universal", "universe", "university", "unknown", "unless", "unlike", "unlikely", "unnecessary", "unpleasant", "unprecedented", "until", "unusual", "unveil", "up", "upcoming", "update", "upgrade", "uphold", "upon", "upper", "upset", "upstairs", "upwards", "urban", "urge", "urgent", "us", "usage", "use", "used", "used to", "useful", "useless", "user", "usual", "usually", "utility", "utilize", "utterly", "vacation", "vacuum", "vague", "valid", "validity", "valley", "valuable", "value", "van", "vanish", "variable", "variation", "varied", "variety", "various", "vary", "vast", "vegetable", "vehicle", "vein", "venture", "venue", "verbal", "verdict", "verify", "verse", "version", "versus", "vertical", "very", "vessel", "veteran", "via", "viable", "vibrant", "vice", "vicious", "victim", "victory", "video", "view", "viewer", "viewpoint", "village", "villager", "violate", "violation", "violence", "violent", "virtual", "virtue", "virus", "visa", "visible", "vision", "visit", "visitor", "visual", "vital", "vitamin", "vocal", "voice", "volume", "voluntary", "volunteer", "vote", "voting", "vow", "vulnerability", "vulnerable", "wage", "wait", "waiter", "wake", "walk", "wall", "wander", "want", "war", "ward", "warehouse", "warfare", "warm", "warming", "warn", "warning", "warrant", "warrior", "wash", "washing", "waste", "watch", "water", "wave", "way", "we", "weak", "weaken", "weakness", "wealth", "wealthy", "weapon", "wear", "weather", "weave", "web", "website", "wedding", "Wednesday", "weed", "week", "weekend", "weekly", "weigh", "weight", "weird", "welcome", "welfare", "well", "well-being", "west", "western", "wet", "what", "whatever", "whatsoever", "wheat", "wheel", "when", "whenever", "where", "whereas", "whereby", "wherever", "whether", "which", "while", "whilst", "whip", "whisper", "white", "who", "whoever", "whole", "wholly", "whom", "whose", "why", "wide", "widely", "widen", "widespread", "widow", "width", "wife", "wild", "wildlife", "will", "willing", "willingness", "win", "wind", "window", "wine", "wing", "winner", "winter", "wipe", "wire", "wisdom", "wise", "wish", "wit", "with", "withdraw", "withdrawal", "within", "without", "witness", "woman", "wonder", "wonderful", "wood", "wooden", "wool", "word", "work", "worker", "workforce", "working", "workout", "workplace", "workshop", "world", "worldwide", "worm", "worried", "worry", "worse", "worship", "worst", "worth", "worthwhile", "worthy", "would", "wound", "wow", "wrap", "wrist", "write", "writer", "writing", "written", "wrong", "yard", "yeah", "year", "yell", "yellow", "yes", "yesterday", "yet", "yield", "you", "young", "youngster", "your", "yours", "yourself", "youth", "zero", "zone", "license", "practice", "program"]
 };
-},{}],"src/displays/word-display.ts":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
-function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
-function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-var WordDisplay = /*#__PURE__*/function () {
-  function WordDisplay(p, word, startingVel, txt, bg) {
-    _classCallCheck(this, WordDisplay);
-    this.p = p;
-    this.word = word;
-    this.pos = this.initializePosition();
-    this.vel = startingVel;
-    this.bg = bg;
-    this.txt = txt;
-  }
-  return _createClass(WordDisplay, [{
-    key: "initializePosition",
-    value: function initializePosition() {
-      var pos;
-      var bbox;
-      do {
-        pos = this.p.createVector(this.p.random(40, this.p.width - 40), 0);
-        bbox = WordDisplay.font.textBounds(this.word, pos.x, pos.y);
-      } while (bbox.x < 0 || bbox.x + bbox.w > this.p.width);
-      return pos;
-    }
-  }, {
-    key: "setVelocity",
-    value: function setVelocity(vel) {
-      this.vel = vel;
-    }
-  }, {
-    key: "display",
-    value: function display() {
-      this.pos.add(this.vel);
-      this.drawBackgroundBox();
-      this.p.push();
-      this.p.fill(this.txt);
-      this.p.text(this.word, this.pos.x, this.pos.y);
-      this.p.pop();
-    }
-  }, {
-    key: "drawBackgroundBox",
-    value: function drawBackgroundBox() {
-      var bbox = this.calculateBoundingBox();
-      this.p.push();
-      this.p.fill(this.bg);
-      this.p.rect(bbox.x, bbox.y, bbox.w, bbox.h, 5);
-      this.p.pop();
-    }
-  }, {
-    key: "calculateBoundingBox",
-    value: function calculateBoundingBox() {
-      var bounds = WordDisplay.font.textBounds(this.word, this.pos.x, this.pos.y);
-      bounds = {
-        x: bounds.x - WordDisplay.padding / 2,
-        y: bounds.y - WordDisplay.padding / 2,
-        w: bounds.w + WordDisplay.padding,
-        h: bounds.h + WordDisplay.padding
-      };
-      return bounds;
-    }
-  }, {
-    key: "isOffScreen",
-    value: function isOffScreen() {
-      return this.pos.y > this.p.height;
-    }
-  }], [{
-    key: "setFont",
-    value: function setFont(font) {
-      WordDisplay.font = font;
-    }
-  }]);
-}();
-WordDisplay.padding = 20;
-var _default = exports.default = WordDisplay;
 },{}],"src/words/word.ts":[function(require,module,exports) {
 "use strict";
 
@@ -31329,8 +31245,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _wordDisplay = _interopRequireDefault(require("../displays/word-display"));
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
 function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
@@ -31341,31 +31255,114 @@ var Word = /*#__PURE__*/function () {
   function Word(p, word, startingVel, onDestroyCallback) {
     var txt = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : [0, 0, 0];
     var bg = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : [255, 255, 255];
+    var suffix = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : null;
     _classCallCheck(this, Word);
+    this.alpha = 255;
+    this.fadeOut = false;
+    this.shouldDestroy = false;
     this.p = p;
     this.word = word;
-    this.wordDisplay = new _wordDisplay.default(p, word, startingVel, txt, bg);
+    if (suffix) {
+      this.displayWord = "".concat(word, " ").concat(suffix);
+    } else {
+      this.displayWord = word;
+    }
+    this.pos = this.initializePosition();
+    this.vel = startingVel;
+    this.bg = bg;
+    this.txt = txt;
     this.onDestroyCallback = onDestroyCallback;
   }
   return _createClass(Word, [{
-    key: "loop",
-    value: function loop() {
-      this.wordDisplay.display();
+    key: "initializePosition",
+    value: function initializePosition() {
+      var pos;
+      var bbox;
+      do {
+        pos = this.p.createVector(this.p.random(40, this.p.width - 40), 0);
+        bbox = Word.font.textBounds(this.word, pos.x, pos.y);
+      } while (bbox.x < 0 || bbox.x + bbox.w > this.p.width);
+      return pos;
     }
   }, {
-    key: "onDestroy",
-    value: function onDestroy() {
-      this.onDestroyCallback();
+    key: "setVelocity",
+    value: function setVelocity(vel) {
+      this.vel = vel;
+    }
+  }, {
+    key: "loop",
+    value: function loop() {
+      if (this.fadeOut) {
+        this.alpha -= 10;
+        if (this.alpha <= 0) {
+          this.shouldDestroy = true;
+        }
+      } else {
+        this.pos.add(this.vel);
+      }
+      this.drawBackgroundBox();
+      this.p.push();
+      this.p.fill(this.txt[0], this.txt[1], this.txt[2], this.alpha);
+      this.p.text(this.displayWord, this.pos.x, this.pos.y);
+      this.p.pop();
+    }
+  }, {
+    key: "drawBackgroundBox",
+    value: function drawBackgroundBox() {
+      var bbox = this.calculateBoundingBox();
+      this.p.push();
+      this.p.fill(this.bg[0], this.bg[1], this.bg[2], this.alpha);
+      this.p.stroke(0, 0, 0, this.alpha);
+      this.p.rect(bbox.x, bbox.y, bbox.w, bbox.h, 5);
+      this.p.pop();
+    }
+  }, {
+    key: "calculateBoundingBox",
+    value: function calculateBoundingBox() {
+      var bounds = Word.font.textBounds(this.displayWord, this.pos.x, this.pos.y);
+      bounds = {
+        x: bounds.x - Word.padding / 2,
+        y: bounds.y - Word.padding / 2,
+        w: bounds.w + Word.padding,
+        h: bounds.h + Word.padding
+      };
+      return bounds;
     }
   }, {
     key: "isOffScreen",
     value: function isOffScreen() {
-      return this.wordDisplay.isOffScreen();
+      return this.pos.y > this.p.height;
+    }
+  }, {
+    key: "getWord",
+    value: function getWord() {
+      return this.word;
+    }
+  }, {
+    key: "shouldDestroyWord",
+    value: function shouldDestroyWord() {
+      return this.shouldDestroy;
+    }
+  }, {
+    key: "onDestroyStart",
+    value: function onDestroyStart() {
+      this.fadeOut = true;
+    }
+  }, {
+    key: "onDestroyEnd",
+    value: function onDestroyEnd() {
+      this.onDestroyCallback();
+    }
+  }], [{
+    key: "setFont",
+    value: function setFont(font) {
+      Word.font = font;
     }
   }]);
 }();
+Word.padding = 20;
 var _default = exports.default = Word;
-},{"../displays/word-display":"src/displays/word-display.ts"}],"src/words/word-types/normal-word.ts":[function(require,module,exports) {
+},{}],"src/words/word-types/normal-word.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31394,8 +31391,8 @@ var NormalWord = /*#__PURE__*/function (_Word) {
   }
   _inherits(NormalWord, _Word);
   return _createClass(NormalWord, [{
-    key: "onDestroy",
-    value: function onDestroy() {
+    key: "onDestroyEnd",
+    value: function onDestroyEnd() {
       this.onDestroyCallback(this.word.length);
     }
   }]);
@@ -31428,14 +31425,14 @@ var MultiplierWord = /*#__PURE__*/function (_Word) {
     var _this;
     _classCallCheck(this, MultiplierWord);
     var multiplierChange = Math.round(p.random(1, 1.25) * 100) / 100;
-    _this = _callSuper(this, MultiplierWord, [p, "".concat(word, " ").concat(multiplierChange, "x"), startingVel, onDestroyCallback, [255, 255, 255], [0, 0, 150]]);
+    _this = _callSuper(this, MultiplierWord, [p, word, startingVel, onDestroyCallback, [255, 255, 255], [0, 0, 150], "".concat(multiplierChange, "x")]);
     _this.multiplierChange = multiplierChange;
     return _this;
   }
   _inherits(MultiplierWord, _Word);
   return _createClass(MultiplierWord, [{
-    key: "onDestroy",
-    value: function onDestroy() {
+    key: "onDestroyEnd",
+    value: function onDestroyEnd() {
       this.onDestroyCallback(this.multiplierChange);
     }
   }]);
@@ -31468,19 +31465,51 @@ var SlowWord = /*#__PURE__*/function (_Word) {
     var _this;
     _classCallCheck(this, SlowWord);
     var velocityChange = Math.round(p.random(0.75, 0.99) * 100) / 100;
-    _this = _callSuper(this, SlowWord, [p, word, startingVel, onDestroyCallback, [255, 255, 255], [0, 150, 0]]);
+    _this = _callSuper(this, SlowWord, [p, word, startingVel, onDestroyCallback, [255, 255, 255], [0, 150, 0], "".concat(velocityChange, "x")]);
     _this.velocityChange = velocityChange;
     return _this;
   }
   _inherits(SlowWord, _Word);
   return _createClass(SlowWord, [{
-    key: "onDestroy",
-    value: function onDestroy() {
+    key: "onDestroyEnd",
+    value: function onDestroyEnd() {
       this.onDestroyCallback(this.velocityChange);
+      console.log("Slow word destroyed");
     }
   }]);
 }(_word.default);
 var _default = exports.default = SlowWord;
+},{"../word":"src/words/word.ts"}],"src/words/word-types/purge-word.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _word = _interopRequireDefault(require("../word"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(t, e) { if (e && ("object" == _typeof(e) || "function" == typeof e)) return e; if (void 0 !== e) throw new TypeError("Derived constructors may only return object or undefined"); return _assertThisInitialized(t); }
+function _assertThisInitialized(e) { if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); return e; }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _getPrototypeOf(t) { return _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) { return t.__proto__ || Object.getPrototypeOf(t); }, _getPrototypeOf(t); }
+function _inherits(t, e) { if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function"); t.prototype = Object.create(e && e.prototype, { constructor: { value: t, writable: !0, configurable: !0 } }), Object.defineProperty(t, "prototype", { writable: !1 }), e && _setPrototypeOf(t, e); }
+function _setPrototypeOf(t, e) { return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) { return t.__proto__ = e, t; }, _setPrototypeOf(t, e); }
+var PurgeWord = /*#__PURE__*/function (_Word) {
+  function PurgeWord(p, word, startingVel, onDestroyCallback) {
+    _classCallCheck(this, PurgeWord);
+    return _callSuper(this, PurgeWord, [p, word, startingVel, onDestroyCallback, [255, 255, 255], [150, 0, 0]]);
+  }
+  _inherits(PurgeWord, _Word);
+  return _createClass(PurgeWord);
+}(_word.default);
+var _default = exports.default = PurgeWord;
 },{"../word":"src/words/word.ts"}],"src/words/word-creator.ts":[function(require,module,exports) {
 "use strict";
 
@@ -31491,6 +31520,7 @@ exports.default = void 0;
 var _normalWord = _interopRequireDefault(require("./word-types/normal-word"));
 var _multiplierWord = _interopRequireDefault(require("./word-types/multiplier-word"));
 var _slowWord = _interopRequireDefault(require("./word-types/slow-word"));
+var _purgeWord = _interopRequireDefault(require("./word-types/purge-word"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -31503,13 +31533,16 @@ var WordCreator = /*#__PURE__*/function () {
     _classCallCheck(this, WordCreator);
     this.wordTypes = [{
       wordType: _normalWord.default,
-      probability: 0.8
+      probability: 0.5
     }, {
       wordType: _multiplierWord.default,
       probability: 0.1
     }, {
       wordType: _slowWord.default,
       probability: 0.1
+    }, {
+      wordType: _purgeWord.default,
+      probability: 0.3
     }];
     this.data = data.words;
   }
@@ -31533,7 +31566,7 @@ var WordCreator = /*#__PURE__*/function () {
   }]);
 }();
 var _default = exports.default = WordCreator;
-},{"./word-types/normal-word":"src/words/word-types/normal-word.ts","./word-types/multiplier-word":"src/words/word-types/multiplier-word.ts","./word-types/slow-word":"src/words/word-types/slow-word.ts"}],"src/controller.ts":[function(require,module,exports) {
+},{"./word-types/normal-word":"src/words/word-types/normal-word.ts","./word-types/multiplier-word":"src/words/word-types/multiplier-word.ts","./word-types/slow-word":"src/words/word-types/slow-word.ts","./word-types/purge-word":"src/words/word-types/purge-word.ts"}],"src/controller.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31547,8 +31580,12 @@ var _wordCreator = _interopRequireDefault(require("./words/word-creator"));
 var _normalWord = _interopRequireDefault(require("./words/word-types/normal-word"));
 var _multiplierWord = _interopRequireDefault(require("./words/word-types/multiplier-word"));
 var _slowWord = _interopRequireDefault(require("./words/word-types/slow-word"));
+var _purgeWord = _interopRequireDefault(require("./words/word-types/purge-word"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t.return || t.return(); } finally { if (u) throw o; } } }; }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
 function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
 function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
@@ -31572,7 +31609,9 @@ var Controller = /*#__PURE__*/function () {
     this.level = 1;
     this.prevAddTime = 0;
     this.p.keyPressed = this.handleKeyPress.bind(this);
-    this.setTimeCheck();
+    this.timeCheckIntervalId = this.setTimeCheck();
+    this.multiplerTimeoutIds = [];
+    this.velocityTimeoutIds = [];
   }
   return _createClass(Controller, [{
     key: "handleKeyPress",
@@ -31582,8 +31621,7 @@ var Controller = /*#__PURE__*/function () {
       var value = this.input.getValue();
       if (this.onScreenWords.has(value)) {
         var word = this.onScreenWords.get(value);
-        word === null || word === void 0 ? void 0 : word.onDestroy();
-        this.onScreenWords.delete(value);
+        word === null || word === void 0 ? void 0 : word.onDestroyStart();
         this.input.clear();
       } else this.decrementLives();
     }
@@ -31604,6 +31642,9 @@ var Controller = /*#__PURE__*/function () {
             case _slowWord.default:
               this.onScreenWords.set(word, new _slowWord.default(this.p, word, this.p.createVector(0, this.wordVelocity), this.tempMultiplyWordVelocities.bind(this)));
               break;
+            case _purgeWord.default:
+              this.onScreenWords.set(word, new _purgeWord.default(this.p, word, this.p.createVector(0, this.wordVelocity), this.purgeAllWords.bind(this)));
+              break;
           }
           this.prevAddTime = this.p.frameCount;
         }
@@ -31612,34 +31653,60 @@ var Controller = /*#__PURE__*/function () {
   }, {
     key: "updateWords",
     value: function updateWords() {
-      var _this = this;
-      this.onScreenWords.forEach(function (word, key) {
-        if (word.isOffScreen()) {
-          _this.onScreenWords.delete(key);
-        } else {
-          word.loop();
+      var _iterator = _createForOfIteratorHelper(this.onScreenWords.values()),
+        _step;
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var word = _step.value;
+          if (word.isOffScreen()) this.onScreenWords.delete(word.getWord());else word.loop();
+          if (word.shouldDestroyWord()) {
+            word.onDestroyEnd();
+            this.onScreenWords.delete(word.getWord());
+          }
         }
-      });
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
     }
   }, {
     key: "tempMultiplyWordVelocities",
     value: function tempMultiplyWordVelocities(multiplier) {
-      var _this2 = this;
+      var _this = this;
       this.wordVelocity *= multiplier;
       this.wordVelocity = Math.round(this.wordVelocity * 100) / 100;
-      this.onScreenWords.forEach(function (word) {
-        word.wordDisplay.setVelocity(_this2.p.createVector(0, _this2.wordVelocity));
-      });
+      var _iterator2 = _createForOfIteratorHelper(this.onScreenWords.values()),
+        _step2;
+      try {
+        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+          var word = _step2.value;
+          word.setVelocity(this.p.createVector(0, this.wordVelocity));
+        }
+      } catch (err) {
+        _iterator2.e(err);
+      } finally {
+        _iterator2.f();
+      }
       this.mainInfoDisplay.setSpeed(this.wordVelocity);
-      setTimeout(function () {
-        _this2.wordVelocity /= multiplier;
-        _this2.wordVelocity = Math.round(_this2.wordVelocity * 100) / 100;
-        _this2.onScreenWords.forEach(function (word) {
-          word.wordDisplay.setVelocity(_this2.p.createVector(0, _this2.wordVelocity));
-        });
-        _this2.mainInfoDisplay.setSpeed(_this2.wordVelocity);
-        console.log("Word velocity reset");
+      var timeout = setTimeout(function () {
+        _this.wordVelocity /= multiplier;
+        _this.wordVelocity = Math.round(_this.wordVelocity * 100) / 100;
+        var _iterator3 = _createForOfIteratorHelper(_this.onScreenWords.values()),
+          _step3;
+        try {
+          for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+            var word = _step3.value;
+            word.setVelocity(_this.p.createVector(0, _this.wordVelocity));
+          }
+        } catch (err) {
+          _iterator3.e(err);
+        } finally {
+          _iterator3.f();
+        }
+        _this.mainInfoDisplay.setSpeed(_this.wordVelocity);
       }, 10000);
+      this.velocityTimeoutIds.push(timeout);
     }
   }, {
     key: "incrementScore",
@@ -31657,43 +31724,85 @@ var Controller = /*#__PURE__*/function () {
   }, {
     key: "tempChangeScoreMultiplier",
     value: function tempChangeScoreMultiplier(multiplier) {
-      var _this3 = this;
+      var _this2 = this;
       this.scoreMultiplier *= multiplier;
       this.scoreMultiplier = Math.round(this.scoreMultiplier * 100) / 100;
       this.mainInfoDisplay.setMultiplier(this.scoreMultiplier);
-      setTimeout(function () {
-        _this3.scoreMultiplier /= multiplier;
-        _this3.scoreMultiplier = Math.round(_this3.scoreMultiplier * 100) / 100;
-        _this3.mainInfoDisplay.setMultiplier(_this3.scoreMultiplier);
+      var timeout = setTimeout(function () {
+        _this2.scoreMultiplier /= multiplier;
+        _this2.scoreMultiplier = Math.round(_this2.scoreMultiplier * 100) / 100;
+        _this2.mainInfoDisplay.setMultiplier(_this2.scoreMultiplier);
         console.log("Score multiplier reset");
       }, 10000);
+      this.multiplerTimeoutIds.push(timeout);
+    }
+  }, {
+    key: "purgeAllWords",
+    value: function purgeAllWords() {
+      var _iterator4 = _createForOfIteratorHelper(this.onScreenWords.values()),
+        _step4;
+      try {
+        for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+          var word = _step4.value;
+          word.onDestroyStart();
+        }
+      } catch (err) {
+        _iterator4.e(err);
+      } finally {
+        _iterator4.f();
+      }
     }
   }, {
     key: "endGame",
     value: function endGame() {
       this.p.noLoop();
+      clearInterval(this.timeCheckIntervalId);
+      var _iterator5 = _createForOfIteratorHelper(this.multiplerTimeoutIds),
+        _step5;
+      try {
+        for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
+          var timeoutId = _step5.value;
+          clearTimeout(timeoutId);
+        }
+      } catch (err) {
+        _iterator5.e(err);
+      } finally {
+        _iterator5.f();
+      }
+      var _iterator6 = _createForOfIteratorHelper(this.velocityTimeoutIds),
+        _step6;
+      try {
+        for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
+          var _timeoutId = _step6.value;
+          clearTimeout(_timeoutId);
+        }
+      } catch (err) {
+        _iterator6.e(err);
+      } finally {
+        _iterator6.f();
+      }
     }
   }, {
     key: "setTimeCheck",
     value: function setTimeCheck() {
-      var _this4 = this;
+      var _this3 = this;
       return setInterval(function () {
-        _this4.timeLeft -= 1;
-        _this4.mainInfoDisplay.setTimeLeft(_this4.timeLeft);
-        _this4.mainInfoDisplay.display();
+        _this3.timeLeft -= 1;
+        _this3.mainInfoDisplay.setTimeLeft(_this3.timeLeft);
+        _this3.mainInfoDisplay.display();
       }, 1000);
     }
   }, {
     key: "newLevel",
     value: function newLevel() {
-      var _this5 = this;
+      // im too lazy so i just hard coded the values
       this.level += 1;
       this.targetScore = 50 * Math.pow(1.5, this.level);
       this.targetScore = Math.floor(this.targetScore);
       this.timeLeft = 60 * Math.pow(1.2, this.level);
       this.timeLeft = Math.floor(this.timeLeft);
       this.scoreMultiplier = 1;
-      this.wordVelocity = 1 * Math.pow(1.2, this.level);
+      this.wordVelocity = Math.pow(1.2, this.level);
       this.score = 0;
       this.lives = 3;
       this.mainInfoDisplay.setScore(this.score);
@@ -31703,9 +31812,42 @@ var Controller = /*#__PURE__*/function () {
       this.mainInfoDisplay.setTimeLeft(this.timeLeft);
       this.mainInfoDisplay.setLevel(this.level);
       this.mainInfoDisplay.setTargetScore(this.targetScore);
-      this.onScreenWords.forEach(function (word) {
-        word.wordDisplay.setVelocity(_this5.p.createVector(0, _this5.wordVelocity));
-      });
+      var _iterator7 = _createForOfIteratorHelper(this.onScreenWords.values()),
+        _step7;
+      try {
+        for (_iterator7.s(); !(_step7 = _iterator7.n()).done;) {
+          var word = _step7.value;
+          word.setVelocity(this.p.createVector(0, this.wordVelocity));
+        }
+      } catch (err) {
+        _iterator7.e(err);
+      } finally {
+        _iterator7.f();
+      }
+      var _iterator8 = _createForOfIteratorHelper(this.multiplerTimeoutIds),
+        _step8;
+      try {
+        for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
+          var timeoutId = _step8.value;
+          clearTimeout(timeoutId);
+        }
+      } catch (err) {
+        _iterator8.e(err);
+      } finally {
+        _iterator8.f();
+      }
+      var _iterator9 = _createForOfIteratorHelper(this.velocityTimeoutIds),
+        _step9;
+      try {
+        for (_iterator9.s(); !(_step9 = _iterator9.n()).done;) {
+          var _timeoutId2 = _step9.value;
+          clearTimeout(_timeoutId2);
+        }
+      } catch (err) {
+        _iterator9.e(err);
+      } finally {
+        _iterator9.f();
+      }
     }
   }, {
     key: "loop",
@@ -31719,7 +31861,7 @@ var Controller = /*#__PURE__*/function () {
   }]);
 }();
 var _default = exports.default = Controller;
-},{"./displays/input-display":"src/displays/input-display.ts","./displays/main-info-display":"src/displays/main-info-display.ts","./assets/english_5k.json":"src/assets/english_5k.json","./words/word-creator":"src/words/word-creator.ts","./words/word-types/normal-word":"src/words/word-types/normal-word.ts","./words/word-types/multiplier-word":"src/words/word-types/multiplier-word.ts","./words/word-types/slow-word":"src/words/word-types/slow-word.ts"}],"src/p5wa1.ts":[function(require,module,exports) {
+},{"./displays/input-display":"src/displays/input-display.ts","./displays/main-info-display":"src/displays/main-info-display.ts","./assets/english_5k.json":"src/assets/english_5k.json","./words/word-creator":"src/words/word-creator.ts","./words/word-types/normal-word":"src/words/word-types/normal-word.ts","./words/word-types/multiplier-word":"src/words/word-types/multiplier-word.ts","./words/word-types/slow-word":"src/words/word-types/slow-word.ts","./words/word-types/purge-word":"src/words/word-types/purge-word.ts"}],"src/p5wa1.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31727,14 +31869,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _controller = _interopRequireDefault(require("./controller"));
-var _wordDisplay = _interopRequireDefault(require("./displays/word-display"));
+var _word = _interopRequireDefault(require("./words/word"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 var p5wa1 = function p5wa1(p) {
   var controller;
   var font;
   p.preload = function () {
     font = p.loadFont("/jbm.ttf");
-    _wordDisplay.default.setFont(font);
+    _word.default.setFont(font);
   };
   p.setup = function () {
     p.createCanvas(800, 400);
@@ -31748,7 +31890,7 @@ var p5wa1 = function p5wa1(p) {
   };
 };
 var _default = exports.default = p5wa1;
-},{"./controller":"src/controller.ts","./displays/word-display":"src/displays/word-display.ts"}],"index.ts":[function(require,module,exports) {
+},{"./controller":"src/controller.ts","./words/word":"src/words/word.ts"}],"index.ts":[function(require,module,exports) {
 "use strict";
 
 var _p = _interopRequireDefault(require("p5"));
@@ -31780,7 +31922,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64073" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56127" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

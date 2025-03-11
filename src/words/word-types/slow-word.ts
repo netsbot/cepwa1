@@ -7,13 +7,14 @@ class SlowWord extends Word {
     constructor(p: p5, word: string, startingVel: p5.Vector, onDestroyCallback: Function) {
         let velocityChange = Math.round(p.random(0.75, 0.99) * 100) / 100;
 
-        super(p, word, startingVel, onDestroyCallback, [255, 255,255], [0, 150, 0]);
+        super(p, word, startingVel, onDestroyCallback, [255, 255,255], [0, 150, 0], `${velocityChange}x`);
 
         this.velocityChange = velocityChange;
     }
 
-    onDestroy() {
+    onDestroyEnd() {
         this.onDestroyCallback(this.velocityChange);
+        console.log("Slow word destroyed");
     }
 }
 

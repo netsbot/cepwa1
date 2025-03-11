@@ -8,12 +8,12 @@ class MultiplierWord extends Word {
     constructor(p: p5, word: string, startingVel: p5.Vector, onDestroyCallback: Function) {
         let multiplierChange = Math.round(p.random(1, 1.25) * 100) / 100;
 
-        super(p, `${word} ${multiplierChange}x`, startingVel, onDestroyCallback, [255, 255, 255], [0, 0, 150]);
+        super(p, word, startingVel, onDestroyCallback, [255, 255, 255], [0, 0, 150], `${multiplierChange}x`);
 
         this.multiplierChange = multiplierChange;
     }
 
-    onDestroy() {
+    onDestroyEnd() {
         this.onDestroyCallback(this.multiplierChange);
     }
 }

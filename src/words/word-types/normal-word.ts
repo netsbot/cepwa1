@@ -6,7 +6,7 @@ class NormalWord extends Word {
         super(p, word, startingVel, onDestroyCallback, [0, 0, 0], [255, 255, 255]);        
     }
 
-    onDestroy(): void {
+    onDestroyEnd(): void {
         this.onDestroyCallback(this.word.length);
     }
 }
