@@ -33,4 +33,4 @@ module.exports={words:["a","abandon","ability","able","abolish","abortion","abou
 },{"howler":"UTMB","./controller":"yDl0","./words/word":"YUHk"}],"QCba":[function(require,module,exports) {
 "use strict";var e=u(require("p5")),r=u(require("./src/p5wa1"));function u(e){return e&&e.__esModule?e:{default:e}}new e.default(r.default);
 },{"p5":"SOQY","./src/p5wa1":"SfDb"}]},{},["QCba"], null)
-//# sourceMappingURL=https://netbot.github.io/p5wa1/p5wa1.bd9373f9.js.map
+//# sourceMappingURL=https://netsbot.github.io/p5wa1/p5wa1.bd9373f9.js.map
