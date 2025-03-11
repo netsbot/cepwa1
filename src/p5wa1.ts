@@ -8,14 +8,30 @@ const p5wa1 = (p: p5) => {
     let font: p5.Font;
 
     p.preload = () => {
-        font = p.loadFont("/assets/jbm.ttf");
+        font = p.loadFont("/assets/jbm.ttf", onerror => {
+            if (onerror) {
+                font = p.loadFont("https://netsbot.github.io/cepwa1/assets/jbm.ttf");
+            }
+        });
+
+
         Word.setFont(font);
 
         Controller.wrongSound = new Howl({
             src: ["/assets/wrong.mp3"],
+            onloaderror: (id, error) => {
+                Controller.wrongSound = new Howl({
+                    src: ["https://netsbot.github.io/cepwa1/assets/wrong.mp3"],
+                });
+            }
         });
         Controller.clickSound = new Howl({
             src: ["/assets/click.mp3"],
+            onloaderror: (id, error) => {
+                Controller.clickSound = new Howl({
+                    src: ["https://netsbot.github.io/cepwa1/assets/click.mp3"],
+                });
+            }
         });
     };
 
