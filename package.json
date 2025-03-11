@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel index.html"
+    "dev": "parcel index.html",
+    "predeploy": "parcel build ./*.html --public-url \"https://netsbot.github.io/cepwa1\"",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +21,8 @@
     "parcel-bundler": "^1.12.5",
     "prettier": "3.4.2",
     "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
