@@ -1,7 +1,6 @@
 import p5 from "p5";
 import Word from "../word";
 
-
 class MultiplierWord extends Word {
     private multiplierChange: number;
 

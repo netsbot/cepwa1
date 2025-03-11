@@ -3,7 +3,7 @@ import Word from "../word";
 
 class NormalWord extends Word {
     constructor(p: p5, word: string, startingVel: p5.Vector, onDestroyCallback: Function) {
-        super(p, word, startingVel, onDestroyCallback, [0, 0, 0], [255, 255, 255]);        
+        super(p, word, startingVel, onDestroyCallback, [0, 0, 0], [255, 255, 255]);
     }
 
     onDestroyEnd(): void {

@@ -3,7 +3,7 @@ import p5 from "p5";
 import InputDisplay from "./displays/input-display";
 import MainInfoDisplay from "./displays/main-info-display";
 
-import english_5k from "./assets/english_5k.json" assert {type: "json"}
+import english_5k from "../dist/assets/english_5k.json" assert { type: "json" };
 import Word from "./words/word";
 import WordGenerator from "./words/word-creator";
 
@@ -105,16 +105,48 @@ class Controller {
 
         switch (wordType) {
             case NormalWord:
-                this.onScreenWords.set(word, new NormalWord(this.p, word, this.p.createVector(0, this.wordVelocity), this.incrementScore.bind(this)));
+                this.onScreenWords.set(
+                    word,
+                    new NormalWord(
+                        this.p,
+                        word,
+                        this.p.createVector(0, this.wordVelocity),
+                        this.incrementScore.bind(this),
+                    ),
+                );
                 break;
             case MultiplierWord:
-                this.onScreenWords.set(word, new MultiplierWord(this.p, word, this.p.createVector(0, this.wordVelocity), this.tempChangeScoreMultiplier.bind(this)));
+                this.onScreenWords.set(
+                    word,
+                    new MultiplierWord(
+                        this.p,
+                        word,
+                        this.p.createVector(0, this.wordVelocity),
+                        this.tempChangeScoreMultiplier.bind(this),
+                    ),
+                );
                 break;
             case SlowWord:
-                this.onScreenWords.set(word, new SlowWord(this.p, word, this.p.createVector(0, this.wordVelocity), this.tempMultiplyWordVelocities.bind(this)));
+                this.onScreenWords.set(
+                    word,
+                    new SlowWord(
+                        this.p,
+                        word,
+                        this.p.createVector(0, this.wordVelocity),
+                        this.tempMultiplyWordVelocities.bind(this),
+                    ),
+                );
                 break;
             case PurgeWord:
-                this.onScreenWords.set(word, new PurgeWord(this.p, word, this.p.createVector(0, this.wordVelocity), this.purgeAllWords.bind(this)));
+                this.onScreenWords.set(
+                    word,
+                    new PurgeWord(
+                        this.p,
+                        word,
+                        this.p.createVector(0, this.wordVelocity),
+                        this.purgeAllWords.bind(this),
+                    ),
+                );
                 break;
         }
     }
@@ -273,16 +305,13 @@ class Controller {
         vignette?.classList.toggle("show", display);
     }
 
-
     loop() {
         this.addNewWord();
-        this.waterLevelDisplay.display()
+        this.waterLevelDisplay.display();
         this.updateWords();
-        if (this.lives <= 0 || this.timeLeft <= 0)
-            this.endGame();
+        if (this.lives <= 0 || this.timeLeft <= 0) this.endGame();
 
-        if (this.score >= this.targetScore)
-            this.newLevel();
+        if (this.score >= this.targetScore) this.newLevel();
     }
 }
 

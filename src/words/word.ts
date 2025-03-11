@@ -20,7 +20,15 @@ abstract class Word {
 
     protected onDestroyCallback: Function;
 
-    protected constructor(p: p5, word: string, startingVel: p5.Vector, onDestroyCallback: Function, txt: [number, number, number] = [0, 0, 0], bg: [number, number, number] = [255, 255, 255], suffix: string | null = null,) {
+    protected constructor(
+        p: p5,
+        word: string,
+        startingVel: p5.Vector,
+        onDestroyCallback: Function,
+        txt: [number, number, number] = [0, 0, 0],
+        bg: [number, number, number] = [255, 255, 255],
+        suffix: string | null = null,
+    ) {
         this.p = p;
 
         this.word = word;
@@ -37,7 +45,6 @@ abstract class Word {
         this.bg = bg;
         this.txt = txt;
 
-
         this.onDestroyCallback = onDestroyCallback;
     }
 
@@ -47,11 +54,16 @@ abstract class Word {
 
     private initializePosition(): p5.Vector {
         let pos: p5.Vector;
-        let bbox: { x: number, y: number, w: number, h: number };
+        let bbox: { x: number; y: number; w: number; h: number };
 
         do {
             pos = this.p.createVector(this.p.random(0, this.p.width), 0);
-            bbox = Word.font.textBounds(this.displayWord, pos.x, pos.y) as { x: number, y: number, w: number, h: number };
+            bbox = Word.font.textBounds(this.displayWord, pos.x, pos.y) as {
+                x: number;
+                y: number;
+                w: number;
+                h: number;
+            };
         } while (bbox.x < 0 || bbox.x + bbox.w > this.p.width);
 
         return pos;
@@ -76,7 +88,7 @@ abstract class Word {
         this.p.push();
 
         this.p.fill(this.txt[0], this.txt[1], this.txt[2], this.alpha);
-        
+
         this.p.text(this.displayWord, this.pos.x, this.pos.y);
 
         this.p.pop();
@@ -94,12 +106,22 @@ abstract class Word {
         this.p.pop();
     }
 
-    calculateBoundingBox(): { x: number, y: number, w: number, h: number } {
-        let bounds = Word.font.textBounds(this.displayWord, this.pos.x, this.pos.y) as { x: number, y: number, w: number, h: number };
+    calculateBoundingBox(): { x: number; y: number; w: number; h: number } {
+        let bounds = Word.font.textBounds(this.displayWord, this.pos.x, this.pos.y) as {
+            x: number;
+            y: number;
+            w: number;
+            h: number;
+        };
 
-        bounds = { x: bounds.x - Word.padding / 2, y: bounds.y - Word.padding / 2, w: bounds.w + Word.padding, h: bounds.h + Word.padding };
+        bounds = {
+            x: bounds.x - Word.padding / 2,
+            y: bounds.y - Word.padding / 2,
+            w: bounds.w + Word.padding,
+            h: bounds.h + Word.padding,
+        };
 
-        return bounds as { x: number, y: number, w: number, h: number };
+        return bounds as { x: number; y: number; w: number; h: number };
     }
 
     isOffScreen(): boolean {

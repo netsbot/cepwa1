@@ -9,21 +9,21 @@ class WordCreator {
     private wordTypes = [
         {
             wordType: NormalWord,
-            probability: 0.75
+            probability: 0.75,
         },
         {
             wordType: MultiplierWord,
-            probability: 0.1
+            probability: 0.1,
         },
         {
             wordType: SlowWord,
-            probability: 0.1
+            probability: 0.1,
         },
         {
             wordType: PurgeWord,
-            probability: 0.05
-        }
-    ]
+            probability: 0.05,
+        },
+    ];
 
     constructor(data: { words: string[] }) {
         this.data = data.words;
