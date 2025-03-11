@@ -3,7 +3,6 @@ import p5 from "p5";
 import InputDisplay from "./displays/input-display";
 import MainInfoDisplay from "./displays/main-info-display";
 
-
 import english_5k from "./assets/english_5k.json" assert {type: "json"}
 import Word from "./words/word";
 import WordGenerator from "./words/word-creator";
@@ -12,7 +11,7 @@ import NormalWord from "./words/word-types/normal-word";
 import MultiplierWord from "./words/word-types/multiplier-word";
 import SlowWord from "./words/word-types/slow-word";
 import PurgeWord from "./words/word-types/purge-word";
-
+import WaterLevelDisplay from "./displays/water-level-display";
 
 class Controller {
     private p: p5;
@@ -31,10 +30,14 @@ class Controller {
     private level: number;
 
     private mainInfoDisplay: MainInfoDisplay;
+    private waterLevelDisplay: WaterLevelDisplay;
 
     private timeCheckIntervalId: NodeJS.Timeout;
     private multiplerTimeoutIds: NodeJS.Timeout[];
     private velocityTimeoutIds: NodeJS.Timeout[];
+
+    static wrongSound: Howl;
+    static clickSound: Howl;
 
     constructor(p: p5) {
         this.p = p;
@@ -44,6 +47,7 @@ class Controller {
 
         this.input = new InputDisplay(p);
         this.mainInfoDisplay = new MainInfoDisplay(p);
+        this.waterLevelDisplay = new WaterLevelDisplay(p);
 
         this.scoreMultiplier = 1;
         this.wordVelocity = 1;
@@ -58,7 +62,7 @@ class Controller {
 
         this.p.keyPressed = this.handleKeyPress.bind(this);
 
-        this.timeCheckIntervalId =  this.setTimeCheck();
+        this.timeCheckIntervalId = this.setTimeCheck();
         this.multiplerTimeoutIds = [];
         this.velocityTimeoutIds = [];
     }
@@ -73,8 +77,15 @@ class Controller {
             let word = this.onScreenWords.get(value);
             word?.onDestroyStart();
             this.input.clear();
-        } else
+            Controller.clickSound.play();
+        } else {
             this.decrementLives();
+            Controller.wrongSound.play();
+            this.setVignette(true);
+            setTimeout(() => {
+                this.setVignette(false);
+            }, 500);
+        }
     }
 
     private addNewWord() {
@@ -114,7 +125,7 @@ class Controller {
                 word.onDestroyEnd();
                 this.onScreenWords.delete(word.getWord());
             }
-               
+
         }
     }
 
@@ -137,7 +148,7 @@ class Controller {
             }
 
             this.mainInfoDisplay.setSpeed(this.wordVelocity);
-            }, 10000);
+        }, 10000);
 
         this.velocityTimeoutIds.push(timeout);
     }
@@ -146,6 +157,7 @@ class Controller {
         this.score += points * this.scoreMultiplier;
         this.score = Math.floor(this.score);
         this.mainInfoDisplay.setScore(this.score);
+        this.waterLevelDisplay.setPercentage(this.score / this.targetScore);
     }
 
     decrementLives() {
@@ -193,7 +205,6 @@ class Controller {
         return setInterval(() => {
             this.timeLeft -= 1;
             this.mainInfoDisplay.setTimeLeft(this.timeLeft);
-            this.mainInfoDisplay.display();
         }, 1000);
     }
 
@@ -220,6 +231,7 @@ class Controller {
         this.mainInfoDisplay.setTimeLeft(this.timeLeft);
         this.mainInfoDisplay.setLevel(this.level);
         this.mainInfoDisplay.setTargetScore(this.targetScore);
+        this.waterLevelDisplay.setPercentage(0);
 
         for (let word of this.onScreenWords.values()) {
             word.setVelocity(this.p.createVector(0, this.wordVelocity));
@@ -234,12 +246,16 @@ class Controller {
         }
     }
 
+    private setVignette(display: boolean) {
+        const vignette = document.getElementById("vignette");
+        vignette?.classList.toggle("show", display);
+    }
+
 
     loop() {
         this.addNewWord();
+        this.waterLevelDisplay.display()
         this.updateWords();
-        this.mainInfoDisplay.display();
-
         if (this.lives <= 0 || this.timeLeft <= 0)
             this.endGame();
 

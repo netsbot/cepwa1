@@ -50,8 +50,8 @@ abstract class Word {
         let bbox: { x: number, y: number, w: number, h: number };
 
         do {
-            pos = this.p.createVector(this.p.random(40, this.p.width - 40), 0);
-            bbox = Word.font.textBounds(this.word, pos.x, pos.y) as { x: number, y: number, w: number, h: number };
+            pos = this.p.createVector(this.p.random(0, this.p.width), 0);
+            bbox = Word.font.textBounds(this.displayWord, pos.x, pos.y) as { x: number, y: number, w: number, h: number };
         } while (bbox.x < 0 || bbox.x + bbox.w > this.p.width);
 
         return pos;

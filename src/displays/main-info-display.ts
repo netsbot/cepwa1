@@ -12,47 +12,56 @@ class MainInfoDisplay {
 
     constructor(p: p5) {
         this.p = p;
+        this.updateLine1();
+        this.updateLine2();
     }
 
-    display() {
-        this.p.push();
-        this.p.fill(255, 0, 0);
-        this.p.rect(this.p.width - 10, 0, 10, this.p.height);
-        this.p.fill(0, 255, 0);
-        this.p.rect(this.p.width - 10, this.p.height - this.score / this.targetScore * this.p.height, 10, this.score / this.targetScore * this.p.height);
-        this.p.pop();
+    updateLine1() {
+        let line1 = document.getElementById("line1");
 
+        if (line1?.innerText != null)
+            line1.innerText = `Score: ${this.score} Lives: ${"x".repeat(this.lives)} Speed: ${this.speed} Multiplier: ${this.multiplier}`;
+    }
 
-        this.p.text(`Score: ${this.score} Lives: ${"x".repeat(this.lives)} Speed: ${this.speed} Multiplier: ${this.multiplier}`, 0, this.p.textSize());
-        this.p.text(`Time left: ${this.timeLeft} Level: ${this.level} Target score: ${this.targetScore}`, 0, this.p.textSize() * 2);
+    updateLine2() {
+        let line2 = document.getElementById("line2");
+        if (line2?.innerText != null)
+            line2.innerText = `Time left: ${this.timeLeft} Level: ${this.level} Target score: ${this.targetScore}`;
     }
 
     setScore(score: number) {
         this.score = score;
+        this.updateLine1();
     }
 
     setLives(lives: number) {
         this.lives = lives;
+        this.updateLine1();
     }
 
     setSpeed(speed: number) {
         this.speed = speed;
+        this.updateLine1();
     }
 
     setMultiplier(multiplier: number) {
         this.multiplier = multiplier;
+        this.updateLine1();
     }
 
     setTimeLeft(timeLeft: number) {
         this.timeLeft = timeLeft;
+        this.updateLine2();
     }
 
     setLevel(level: number) {
         this.level = level;
+        this.updateLine2();
     }
 
     setTargetScore(targetScore: number) {
         this.targetScore = targetScore;
+        this.updateLine2();
     }
 }
 
