@@ -35,7 +35,7 @@ class Controller {
     private waterLevelDisplay: WaterLevelDisplay;
 
     private timeCheckIntervalId: NodeJS.Timeout;
-    private multiplerTimeoutIds: NodeJS.Timeout[];
+    private multiplierTimeoutIds: NodeJS.Timeout[];
     private velocityTimeoutIds: NodeJS.Timeout[];
 
     static wrongSound: Howl;
@@ -58,7 +58,7 @@ class Controller {
         this.p.keyPressed = this.handleKeyPress.bind(this);
 
         this.timeCheckIntervalId = this.setTimeCheck();
-        this.multiplerTimeoutIds = [];
+        this.multiplierTimeoutIds = [];
         this.velocityTimeoutIds = [];
     }
 
@@ -220,7 +220,7 @@ class Controller {
             this.mainInfoDisplay.setMultiplier(this.scoreMultiplier);
         }, 10000);
 
-        this.multiplerTimeoutIds.push(timeout);
+        this.multiplierTimeoutIds.push(timeout);
     }
 
     private purgeAllWords() {
@@ -232,7 +232,7 @@ class Controller {
     private endGame() {
         this.p.noLoop();
         clearInterval(this.timeCheckIntervalId);
-        this.clearTimeouts(this.multiplerTimeoutIds);
+        this.clearTimeouts(this.multiplierTimeoutIds);
         this.clearTimeouts(this.velocityTimeoutIds);
 
         this.displayEndGameMessage();
@@ -285,7 +285,7 @@ class Controller {
 
         this.updateDisplaysForNewLevel();
         this.updateWordVelocities();
-        this.clearTimeouts(this.multiplerTimeoutIds);
+        this.clearTimeouts(this.multiplierTimeoutIds);
         this.clearTimeouts(this.velocityTimeoutIds);
     }
 
