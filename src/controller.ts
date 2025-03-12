@@ -24,7 +24,7 @@ class Controller {
     private wordVelocity: number = 1;
     private totalScore: number = 0;
     private score: number = 0;
-    private highScore: number = localStorage.getItem("highScore") ? parseInt(localStorage.getItem("highScore")!) : 0;
+    private highScore: number = localStorage.getItem("highScore") ? parseFloat(localStorage.getItem("highScore")!) : 0;
     private lives: number = 3;
 
     private targetScore: number = 50;
@@ -192,7 +192,7 @@ class Controller {
         this.score += points * this.scoreMultiplier;
         this.score = Math.round(this.score * 100) / 100;
         this.totalScore += points * this.scoreMultiplier;
-        this.totalScore = Math.round(this.score * 100) / 100;
+        this.totalScore = Math.round(this.totalScore * 100) / 100;
         this.mainInfoDisplay.setScore(this.totalScore);
         this.waterLevelDisplay.setPercentage(this.score / this.targetScore);
 
@@ -290,7 +290,7 @@ class Controller {
     }
 
     private updateDisplaysForNewLevel() {
-        this.mainInfoDisplay.setScore(this.score);
+        this.mainInfoDisplay.setScore(this.totalScore);
         this.mainInfoDisplay.setLives(this.lives);
         this.mainInfoDisplay.setSpeed(this.wordVelocity);
         this.mainInfoDisplay.setMultiplier(this.scoreMultiplier);
